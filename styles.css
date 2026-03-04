@@ -328,29 +328,26 @@ img {
 
   .relatives-card {
     margin-top: 12px;
-    padding: 10px 12px;
+    padding: 8px;
     border: 1px solid #98cbbc;
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.7);
-    display: inline-flex;
-    flex-direction: column;
-    gap: 4px;
+    display: block;
+    width: min(100%, 380px);
   }
 
-  .relatives-card span {
-    font-size: 12px;
-    font-weight: 700;
-    color: #2a6155;
-    text-transform: uppercase;
-    letter-spacing: 0.2px;
-  }
-
-  .relatives-card a {
+  .relatives-card-link {
+    display: block;
     text-decoration: none;
-    font-size: 20px;
-    line-height: 1.2;
-    font-weight: 800;
-    color: #0f4f43;
+    color: inherit;
+  }
+
+  .relatives-card-image {
+    width: 100%;
+    aspect-ratio: 1098 / 626;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(23, 73, 63, 0.16);
   }
 }
 
