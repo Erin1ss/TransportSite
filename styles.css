@@ -408,7 +408,7 @@ img {
   padding-bottom: 6px;
   scrollbar-width: thin;
   -webkit-overflow-scrolling: touch;
-  touch-action: pan-x;
+  touch-action: manipulation;
   overscroll-behavior-x: contain;
 }
 
@@ -1106,7 +1106,7 @@ img {
     padding-bottom: 2px;
     scrollbar-width: thin;
     -webkit-overflow-scrolling: touch;
-    touch-action: pan-x;
+    touch-action: manipulation;
     overscroll-behavior-x: contain;
   }
 
@@ -1122,7 +1122,7 @@ img {
     padding-bottom: 6px;
     scrollbar-width: thin;
     -webkit-overflow-scrolling: touch;
-    touch-action: pan-x;
+    touch-action: manipulation;
     overscroll-behavior-x: contain;
   }
 
