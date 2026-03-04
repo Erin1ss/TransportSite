@@ -299,6 +299,28 @@ img {
 }
 
 @media (min-width: 721px) {
+  .panel--carded {
+    align-self: end;
+    margin-top: 44px;
+    width: min(100%, 46ch);
+    padding: 14px 16px;
+  }
+
+  .panel--carded h2 {
+    margin-bottom: 6px;
+    font-size: 20px;
+  }
+
+  .panel--carded p {
+    line-height: 1.45;
+  }
+
+  .panel--carded .relatives-card {
+    margin-top: 10px;
+    padding: 5px;
+    width: min(100%, 382px);
+  }
+
   .panel--relatives {
     justify-self: start;
     align-self: end;
