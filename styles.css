@@ -301,39 +301,40 @@ img {
 @media (min-width: 721px) {
   .panel--relatives {
     justify-self: start;
-    align-self: start;
-    margin-top: 30px;
+    align-self: end;
+    margin-top: 44px;
     width: fit-content;
     max-width: 40ch;
     height: max-content;
     padding: 16px 18px;
-    border: 1px solid #9fd1c6;
+    border: 1px solid #2b5d5f;
     border-radius: 14px;
-    background: linear-gradient(160deg, #e9f8f2, #d6efe5);
-    box-shadow: 0 8px 20px rgba(29, 85, 70, 0.12);
-    color: #103f35;
+    background: #11393b;
+    box-shadow: 0 10px 24px rgba(12, 44, 46, 0.22);
+    color: #ecfffc;
   }
 
   .panel--relatives h2 {
     margin-bottom: 8px;
     font-size: 20px;
-    color: #0f4a3d;
+    color: #ecfffc;
   }
 
   .panel--relatives p {
-    color: #1d4f45;
+    color: #d3ece8;
     font-size: 15px;
     line-height: 1.5;
   }
 
   .relatives-card {
     margin-top: 12px;
-    padding: 8px;
-    border: 1px solid #98cbbc;
+    padding: 6px;
+    border: 1px solid rgba(183, 224, 216, 0.42);
     border-radius: 12px;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(230, 247, 242, 0.08);
     display: block;
-    width: min(100%, 380px);
+    width: fit-content;
+    max-width: 100%;
   }
 
   .relatives-card-link {
@@ -343,11 +344,13 @@ img {
   }
 
   .relatives-card-image {
-    width: 100%;
-    aspect-ratio: 1098 / 626;
-    object-fit: cover;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
     border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(23, 73, 63, 0.16);
+    box-shadow: 0 8px 16px rgba(9, 29, 31, 0.32);
   }
 }
 
