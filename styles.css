@@ -301,10 +301,11 @@ img {
 @media (min-width: 721px) {
   .panel--relatives {
     justify-self: start;
-    align-self: end;
-    margin-top: 26px;
+    align-self: start;
+    margin-top: 30px;
     width: fit-content;
     max-width: 40ch;
+    height: max-content;
     padding: 16px 18px;
     border: 1px solid #9fd1c6;
     border-radius: 14px;
@@ -323,6 +324,33 @@ img {
     color: #1d4f45;
     font-size: 15px;
     line-height: 1.5;
+  }
+
+  .relatives-card {
+    margin-top: 12px;
+    padding: 10px 12px;
+    border: 1px solid #98cbbc;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.7);
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .relatives-card span {
+    font-size: 12px;
+    font-weight: 700;
+    color: #2a6155;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+  }
+
+  .relatives-card a {
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 800;
+    color: #0f4f43;
   }
 }
 
@@ -492,7 +520,7 @@ img {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-areas:
     "featured featured featured featured featured featured wide wide wide wide wide wide"
-    "side side side side visit visit visit visit small-a small-a small-a small-a";
+    "side side side side side side small-a small-a small-a small-a small-a small-a";
   gap: 18px;
   align-items: stretch;
   max-width: 100%;
@@ -525,7 +553,6 @@ img {
 }
 
 .photo-tile--small-a { grid-area: small-a; }
-.photo-tile--small-c { grid-area: visit; }
 
 .photo-frame {
   position: relative;
@@ -542,7 +569,6 @@ img {
 .photo-frame--wide { --photo-ratio: 1219 / 713; }
 .photo-frame--side { --photo-ratio: 2625 / 1440; }
 .photo-tile--small-a .photo-frame { --photo-ratio: 1632 / 1440; }
-.photo-tile--small-c .photo-frame { --photo-ratio: 1098 / 626; }
 
 .photo-picture {
   display: block;
@@ -600,8 +626,7 @@ img {
   background: #fbfdfc;
 }
 
-.photo-tile--small-a .photo-caption,
-.photo-tile--small-c .photo-caption {
+.photo-tile--small-a .photo-caption {
   font-size: 15px;
 }
 
@@ -647,7 +672,6 @@ img {
   }
 
   .photo-tile--side .photo-picture,
-  .photo-tile--small-c .photo-picture,
   .photo-tile--small-a .photo-picture {
     min-height: 260px;
   }
@@ -854,8 +878,7 @@ img {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-areas:
       "featured wide"
-      "side visit"
-      "small-a small-a";
+      "side small-a";
     gap: 14px;
   }
 }

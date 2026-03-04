@@ -123,6 +123,10 @@
           <aside class="panel panel--relatives" aria-label="Ключевая информация">
             <h2>Что важно для родственников</h2>
             <p>Подача без задержек, бережный подъем и спуск, 4 сопровождающих места и уважительное отношение к пациенту на каждом этапе перевозки.</p>
+            <div class="relatives-card" aria-label="Визитка службы">
+              <span>Визитка службы</span>
+              <a href="tel:+79652595912" aria-label="Позвонить в службу перевозки">+7 (965) 259-59-12</a>
+            </div>
           </aside>
         </div>
         <div class="badges" style="margin-top:18px;">
@@ -191,24 +195,6 @@
               </a>
             </div>
             <figcaption class="photo-caption"><strong>Наш салон: безопасное оснащение</strong> Надежная фиксация оборудования и комфортное пространство для пациента и сопровождающего.</figcaption>
-          </figure>
-          <figure class="photo-tile photo-tile--small photo-tile--small-c reveal">
-            <div class="photo-frame photo-frame--small">
-              <a class="photo-link" href="visit.jpg" target="_blank" rel="noopener noreferrer" aria-label="Перевозка от кровати до кровати в полном размере">
-                <picture class="photo-picture">
-                  <source
-                    type="image/webp"
-                    srcset="images/webp/visit-900.webp 900w, images/webp/visit-1098.webp 1098w"
-                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw">
-                  <source
-                    type="image/jpeg"
-                    srcset="images/jpg/visit-900.jpg 900w, visit.jpg 1098w"
-                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw">
-                  <img class="photo-image" src="visit.jpg" srcset="images/jpg/visit-900.jpg 900w, visit.jpg 1098w" sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw" width="1098" height="626" loading="lazy" decoding="async" fetchpriority="low" alt="Бригада помогает пациенту при транспортировке от кровати до кровати">
-                </picture>
-              </a>
-            </div>
-            <figcaption class="photo-caption"><strong>Наша работа: от кровати до кровати</strong> Бригада аккуратно выполняет перенос на всех этапах маршрута.</figcaption>
           </figure>
           <figure class="photo-tile photo-tile--small photo-tile--small-a reveal">
             <div class="photo-frame photo-frame--small">
@@ -316,12 +302,6 @@
       </div>
     </section>
 
-    <div class="container">
-      <section class="footer-cta reveal">
-        <p><strong>Нужна перевозка лежачего больного сейчас?</strong><br>Позвоните, и мы сразу согласуем подачу машины и детали перевозки.</p>
-        <a class="button primary" href="tel:+79652595912">+7 (965) 259-59-12</a>
-      </section>
-    </div>
   </main>
 
   <footer class="footer">
@@ -395,9 +375,7 @@
       "https://edemleza.ru/images/webp/inside-2625.webp",
       "https://edemleza.ru/inside.jpg",
       "https://edemleza.ru/images/webp/spencer-1632.webp",
-      "https://edemleza.ru/SpencerStretcher.jpg",
-      "https://edemleza.ru/images/webp/visit-1098.webp",
-      "https://edemleza.ru/visit.jpg"
+      "https://edemleza.ru/SpencerStretcher.jpg"
     ],
     "hasPart": {
       "@id": "https://edemleza.ru/#fleet-gallery"
@@ -551,7 +529,6 @@
           { "@id": "https://edemleza.ru/#image-ford-transit" },
           { "@id": "https://edemleza.ru/#image-fiat-ducato" },
           { "@id": "https://edemleza.ru/#image-inside" },
-          { "@id": "https://edemleza.ru/#image-visit" },
           { "@id": "https://edemleza.ru/#image-spencer" }
         ]
       },
@@ -619,22 +596,6 @@
         "encodingFormat": "image/webp",
         "width": 1632,
         "height": 1440
-      },
-      {
-        "@type": "ImageObject",
-        "@id": "https://edemleza.ru/#image-visit",
-        "name": "Сопровождение пациента от кровати до кровати",
-        "url": "https://edemleza.ru/visit.jpg",
-        "contentUrl": "https://edemleza.ru/images/webp/visit-1098.webp",
-        "thumbnailUrl": "https://edemleza.ru/visit.jpg",
-        "caption": "Бригада помогает пациенту при переносе и транспортировке",
-        "isPartOf": {
-          "@id": "https://edemleza.ru/#fleet-gallery"
-        },
-        "inLanguage": "ru",
-        "encodingFormat": "image/webp",
-        "width": 1098,
-        "height": 626
       }
     ]
   }
