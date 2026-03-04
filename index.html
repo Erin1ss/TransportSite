@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="description" content="Перевозка лежачих больных в Казани и Республике Татарстан от кровати до кровати. Круглосуточно, бережно, с профессиональной командой и санитарным транспортом.">
   <meta name="keywords" content="перевозка лежачих больных, медицинское такси Казань, транспортировка больных, санитарная перевозка, перевозка инвалидов">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="author" content="ЕдемЛежа">
   <meta name="format-detection" content="telephone=yes">
   <meta name="theme-color" content="#0f766e">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <title>Перевозка лежачих больных в Казани - ЕдемЛежа</title>
   <link rel="canonical" href="https://edemleza.ru/">
+  <link rel="alternate" hreflang="ru-RU" href="https://edemleza.ru/">
+  <link rel="alternate" hreflang="x-default" href="https://edemleza.ru/">
   <meta name="geo.region" content="RU-TA">
   <meta name="geo.placename" content="Казань">
 
@@ -39,7 +42,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="images/webp/ford-transit-2084.webp" imagesrcset="images/webp/ford-transit-960.webp 960w, images/webp/ford-transit-1500.webp 1500w, images/webp/ford-transit-2084.webp 2084w" imagesizes="(max-width: 720px) 100vw, (max-width: 980px) 100vw, 64vw">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -55,25 +57,60 @@
     <div class="container brandbar-inner">
       <a class="brand" href="index.html">ЕдемЛежа<small>От кровати до кровати</small></a>
       <nav class="nav" aria-label="Основная навигация">
-        <a href="index.html">Главная</a>
-        <a href="testimonials.html">Отзывы</a>
-        <a href="contacts.html">Контакты</a>
+        <a class="nav-page" href="index.html" aria-current="page">Главная</a>
+        <a class="nav-page" href="testimonials.html">Отзывы</a>
+        <a class="nav-page" href="contacts.html">Контакты</a>
         <a class="phone-link" href="tel:+79652595912" aria-label="Позвонить в службу перевозки">+7 (965) 259-59-12</a>
         <a class="cta-btn" href="tel:+79652595912" aria-label="Срочный заказ перевозки">Срочный вызов</a>
       </nav>
     </div>
   </header>
 
+  <div class="mobile-top-cta" aria-label="Быстрый звонок">
+    <a href="tel:+79652595912" aria-label="Сразу позвонить и заказать перевозку">Позвонить сейчас: +7 (965) 259-59-12</a>
+  </div>
+
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <div class="container">
+      <ol class="breadcrumbs-list">
+        <li><a href="index.html" aria-current="page">Главная</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <nav class="mobile-section-nav" aria-label="Навигация по разделам">
+    <div class="container">
+      <a href="#fleet-heading">Транспорт</a>
+      <a href="#process-heading">Этапы</a>
+      <a href="#cases-heading">Сценарии</a>
+      <a href="#reviews-heading">Отзывы</a>
+      <a href="#faq-heading">FAQ</a>
+    </div>
+  </nav>
+
   <main id="content">
     <section class="hero">
       <div class="container hero-card reveal">
         <div class="hero-grid">
           <div>
+            <p class="hero-kicker">Казань и Татарстан • 24/7</p>
             <h1>Перевозка лежачих больных от кровати до кровати</h1>
-            <p>Помогаем семьям в сложный момент: аккуратно переносим пациента, бережно доставляем в клинику, домой или на реабилитацию. Работаем по Казани и всей Республике Татарстан.</p>
+            <figure class="hero-mobile-shot">
+              <picture>
+                <source type="image/webp" srcset="images/webp/ford-transit-960.webp">
+                <source type="image/jpeg" srcset="images/jpg/ford-transit-960.jpg">
+                <img src="images/jpg/ford-transit-960.jpg" width="960" height="540" loading="eager" decoding="async" fetchpriority="high" alt="Санитарный транспорт для перевозки лежачих больных в Казани">
+              </picture>
+            </figure>
+            <p class="hero-lead">Перевозим аккуратно и без задержек. <span class="hero-lead-extra">Помогаем с подъемом, спуском и сопровождением до кровати.</span></p>
             <div class="hero-actions">
-              <a class="button primary" href="tel:+79652595912">Позвонить и заказать</a>
+              <a class="button primary" href="tel:+79652595912" aria-label="Позвонить и заказать перевозку лежачего больного">Позвонить и заказать</a>
               <a class="button secondary" href="contacts.html">Все контакты</a>
+            </div>
+            <div class="hero-proof" aria-label="Ключевые преимущества">
+              <span>24/7</span>
+              <span>Без задержек</span>
+              <span>Опытная бригада</span>
             </div>
             <div class="quick-links" aria-label="Быстрые ссылки">
               <a href="#cases-heading">Сценарии перевозки</a>
@@ -83,7 +120,7 @@
           </div>
           <aside class="panel" aria-label="Ключевая информация">
             <h2>Что важно для родственников</h2>
-            <p>Подача без задержек, бережный подъем и спуск, место для сопровождающего и уважительное отношение к пациенту на каждом этапе перевозки.</p>
+            <p>Подача без задержек, бережный подъем и спуск, 4 сопровождающих места и уважительное отношение к пациенту на каждом этапе перевозки.</p>
           </aside>
         </div>
         <div class="badges" style="margin-top:18px;">
@@ -94,105 +131,68 @@
       </div>
     </section>
 
-    <section class="section" aria-labelledby="fleet-heading">
+    <section class="section section--fleet" aria-labelledby="fleet-heading">
       <div class="container">
         <h2 class="section-title reveal" id="fleet-heading">Санитарный транспорт и оснащение</h2>
-        <p class="section-lead reveal">Используем автомобили, подготовленные для медицинской транспортировки, и оборудование для безопасного перемещения пациента.</p>
-        <p class="gallery-note reveal">Фотографии техники публикуем без обрезания кадров: вы видите реальный формат салона, каталок и условий перевозки.</p>
+        <p class="section-lead reveal">Используем автомобили, подготовленные для медицинской транспортировки, оборудование для безопасного перемещения пациента и 4 сопровождающих места в салоне.</p>
         <div class="photo-composition">
           <figure class="photo-tile photo-tile--featured reveal">
             <div class="photo-frame photo-frame--featured">
-              <a class="photo-link" href="FordTransit.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть фото Ford Transit в полном размере">
+              <a class="photo-link" href="FordTransit.jpg" target="_blank" rel="noopener noreferrer" aria-label="Ford Transit в полном размере">
                 <picture class="photo-picture">
                   <source
                     type="image/webp"
                     srcset="images/webp/ford-transit-960.webp 960w, images/webp/ford-transit-1500.webp 1500w, images/webp/ford-transit-2084.webp 2084w"
-                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 100vw, 64vw">
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 48vw">
                   <source
                     type="image/jpeg"
                     srcset="images/jpg/ford-transit-960.jpg 960w, images/jpg/ford-transit-1500.jpg 1500w, FordTransit.jpg 2084w"
-                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 100vw, 64vw">
-                  <img class="photo-image" src="FordTransit.jpg" srcset="images/jpg/ford-transit-960.jpg 960w, images/jpg/ford-transit-1500.jpg 1500w, FordTransit.jpg 2084w" sizes="(max-width: 720px) 100vw, (max-width: 980px) 100vw, 64vw" width="2084" height="1172" loading="eager" decoding="async" fetchpriority="high" alt="Санитарный автомобиль Ford Transit для перевозки лежачих больных в Казани">
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 48vw">
+                  <img class="photo-image" src="FordTransit.jpg" srcset="images/jpg/ford-transit-960.jpg 960w, images/jpg/ford-transit-1500.jpg 1500w, FordTransit.jpg 2084w" sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 48vw" width="2084" height="1172" loading="lazy" decoding="async" fetchpriority="low" alt="Санитарный автомобиль Ford Transit для перевозки лежачих больных в Казани">
                 </picture>
               </a>
             </div>
-            <figcaption class="photo-caption"><strong>Ford Transit</strong> Просторный салон и плавный ход для бережной перевозки пациента по городу и между населенными пунктами.</figcaption>
+            <figcaption class="photo-caption"><strong>Наши машины: Ford Transit</strong> Просторный салон и плавный ход для бережной перевозки пациента по городу и между населенными пунктами.</figcaption>
           </figure>
           <figure class="photo-tile photo-tile--wide reveal">
             <div class="photo-frame photo-frame--wide">
-              <a class="photo-link" href="FiatDucatoAmbulance.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть фото Fiat Ducato в полном размере">
+              <a class="photo-link" href="FiatDucatoAmbulance.jpg" target="_blank" rel="noopener noreferrer" aria-label="Fiat Ducato в полном размере">
                 <picture class="photo-picture">
                   <source
                     type="image/webp"
                     srcset="images/webp/fiat-ducato-900.webp 900w, images/webp/fiat-ducato-1219.webp 1219w"
-                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 33vw">
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 48vw">
                   <source
                     type="image/jpeg"
                     srcset="images/jpg/fiat-ducato-900.jpg 900w, FiatDucatoAmbulance.jpg 1219w"
-                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 33vw">
-                  <img class="photo-image" src="FiatDucatoAmbulance.jpg" srcset="images/jpg/fiat-ducato-900.jpg 900w, FiatDucatoAmbulance.jpg 1219w" sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 33vw" width="1219" height="713" loading="lazy" decoding="async" fetchpriority="low" alt="Санитарный автомобиль Fiat Ducato для медицинской транспортировки пациентов">
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 48vw">
+                  <img class="photo-image" src="FiatDucatoAmbulance.jpg" srcset="images/jpg/fiat-ducato-900.jpg 900w, FiatDucatoAmbulance.jpg 1219w" sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 48vw" width="1219" height="713" loading="lazy" decoding="async" fetchpriority="low" alt="Санитарный автомобиль Fiat Ducato для медицинской транспортировки пациентов">
                 </picture>
               </a>
             </div>
-            <figcaption class="photo-caption"><strong>Fiat Ducato</strong> Комфортный микроклимат и удобное место для сопровождающего родственника в пути.</figcaption>
+            <figcaption class="photo-caption"><strong>Наши машины: Fiat Ducato</strong> Комфортный микроклимат и 4 сопровождающих места для родственников в пути.</figcaption>
           </figure>
           <figure class="photo-tile photo-tile--side reveal">
             <div class="photo-frame photo-frame--side">
-              <a class="photo-link" href="inside.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть фото салона в полном размере">
+              <a class="photo-link" href="inside.jpg" target="_blank" rel="noopener noreferrer" aria-label="Салон автомобиля в полном размере">
                 <picture class="photo-picture">
                   <source
                     type="image/webp"
                     srcset="images/webp/inside-960.webp 960w, images/webp/inside-1600.webp 1600w, images/webp/inside-2625.webp 2625w"
-                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 33vw">
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw">
                   <source
                     type="image/jpeg"
                     srcset="images/jpg/inside-960.jpg 960w, images/jpg/inside-1600.jpg 1600w, inside.jpg 2625w"
-                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 33vw">
-                  <img class="photo-image" src="inside.jpg" srcset="images/jpg/inside-960.jpg 960w, images/jpg/inside-1600.jpg 1600w, inside.jpg 2625w" sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 33vw" width="2625" height="1440" loading="lazy" decoding="async" fetchpriority="low" alt="Внутреннее пространство санитарного автомобиля для транспортировки лежачих больных">
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw">
+                  <img class="photo-image" src="inside.jpg" srcset="images/jpg/inside-960.jpg 960w, images/jpg/inside-1600.jpg 1600w, inside.jpg 2625w" sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw" width="2625" height="1440" loading="lazy" decoding="async" fetchpriority="low" alt="Внутреннее пространство санитарного автомобиля для транспортировки лежачих больных">
                 </picture>
               </a>
             </div>
-            <figcaption class="photo-caption"><strong>Оснащенный салон</strong> Надежная фиксация оборудования и комфортное пространство для пациента и сопровождающего.</figcaption>
-          </figure>
-          <figure class="photo-tile photo-tile--small photo-tile--small-a reveal">
-            <div class="photo-frame photo-frame--small">
-              <a class="photo-link" href="SpencerStretcher.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть фото каталки Spencer в полном размере">
-                <picture class="photo-picture">
-                  <source
-                    type="image/webp"
-                    srcset="images/webp/spencer-900.webp 900w, images/webp/spencer-1400.webp 1400w, images/webp/spencer-1632.webp 1632w"
-                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw">
-                  <source
-                    type="image/jpeg"
-                    srcset="images/jpg/spencer-900.jpg 900w, images/jpg/spencer-1400.jpg 1400w, SpencerStretcher.jpg 1632w"
-                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw">
-                  <img class="photo-image" src="SpencerStretcher.jpg" srcset="images/jpg/spencer-900.jpg 900w, images/jpg/spencer-1400.jpg 1400w, SpencerStretcher.jpg 1632w" sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw" width="1632" height="1440" loading="lazy" decoding="async" fetchpriority="low" alt="Медицинская каталка Spencer для безопасной перевозки лежачих пациентов">
-                </picture>
-              </a>
-            </div>
-            <figcaption class="photo-caption"><strong>Каталка Spencer</strong> Профессиональная перевозочная система с мягкой фиксацией для безопасного перемещения пациента.</figcaption>
-          </figure>
-          <figure class="photo-tile photo-tile--small photo-tile--small-b reveal">
-            <div class="photo-frame photo-frame--small">
-              <a class="photo-link" href="WheelchairTransportation.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть фото перевозки в инвалидной коляске в полном размере">
-                <picture class="photo-picture">
-                  <source
-                    type="image/webp"
-                    srcset="images/webp/wheelchair-900.webp 900w, images/webp/wheelchair-1200.webp 1200w"
-                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw">
-                  <source
-                    type="image/jpeg"
-                    srcset="images/jpg/wheelchair-900.jpg 900w, WheelchairTransportation.jpg 1200w"
-                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw">
-                  <img class="photo-image" src="WheelchairTransportation.jpg" srcset="images/jpg/wheelchair-900.jpg 900w, WheelchairTransportation.jpg 1200w" sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw" width="1200" height="1200" loading="lazy" decoding="async" fetchpriority="low" alt="Перевозка маломобильных пациентов в инвалидной коляске по Казани и Татарстану">
-                </picture>
-              </a>
-            </div>
-            <figcaption class="photo-caption"><strong>Перевозка маломобильных</strong> Помощь при посадке и сопровождении людей в инвалидных колясках.</figcaption>
+            <figcaption class="photo-caption"><strong>Наш салон: безопасное оснащение</strong> Надежная фиксация оборудования и комфортное пространство для пациента и сопровождающего.</figcaption>
           </figure>
           <figure class="photo-tile photo-tile--small photo-tile--small-c reveal">
             <div class="photo-frame photo-frame--small">
-              <a class="photo-link" href="visit.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть фото перевозки от кровати до кровати в полном размере">
+              <a class="photo-link" href="visit.jpg" target="_blank" rel="noopener noreferrer" aria-label="Перевозка от кровати до кровати в полном размере">
                 <picture class="photo-picture">
                   <source
                     type="image/webp"
@@ -206,7 +206,25 @@
                 </picture>
               </a>
             </div>
-            <figcaption class="photo-caption"><strong>От кровати до кровати</strong> Бригада аккуратно выполняет перенос на всех этапах маршрута.</figcaption>
+            <figcaption class="photo-caption"><strong>Наша работа: от кровати до кровати</strong> Бригада аккуратно выполняет перенос на всех этапах маршрута.</figcaption>
+          </figure>
+          <figure class="photo-tile photo-tile--small photo-tile--small-a reveal">
+            <div class="photo-frame photo-frame--small">
+              <a class="photo-link" href="SpencerStretcher.jpg" target="_blank" rel="noopener noreferrer" aria-label="Каталка Spencer в полном размере">
+                <picture class="photo-picture">
+                  <source
+                    type="image/webp"
+                    srcset="images/webp/spencer-900.webp 900w, images/webp/spencer-1400.webp 1400w, images/webp/spencer-1632.webp 1632w"
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 100vw, 32vw">
+                  <source
+                    type="image/jpeg"
+                    srcset="images/jpg/spencer-900.jpg 900w, images/jpg/spencer-1400.jpg 1400w, SpencerStretcher.jpg 1632w"
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 100vw, 32vw">
+                  <img class="photo-image" src="SpencerStretcher.jpg" srcset="images/jpg/spencer-900.jpg 900w, images/jpg/spencer-1400.jpg 1400w, SpencerStretcher.jpg 1632w" sizes="(max-width: 720px) 100vw, (max-width: 980px) 100vw, 32vw" width="1632" height="1440" loading="lazy" decoding="async" fetchpriority="low" alt="Медицинская каталка Spencer для безопасной перевозки лежачих пациентов">
+                </picture>
+              </a>
+            </div>
+            <figcaption class="photo-caption"><strong>Наши каталки: Spencer</strong> Профессиональная перевозочная система с мягкой фиксацией для безопасного перемещения пациента.</figcaption>
           </figure>
         </div>
       </div>
@@ -214,7 +232,7 @@
 
     <section class="section">
       <div class="container">
-        <h2 class="section-title reveal">Как проходит перевозка</h2>
+        <h2 class="section-title reveal" id="process-heading">Как проходит перевозка</h2>
         <div class="steps">
           <article class="step reveal"><strong>1. Заявка</strong>Уточняем адреса, этаж, состояние пациента и время подачи.</article>
           <article class="step reveal"><strong>2. Подача</strong>Бригада приезжает вовремя, готовит носилки и маршрут.</article>
@@ -282,12 +300,12 @@
       <div class="container">
         <h2 class="section-title reveal" id="faq-heading">Частые вопросы</h2>
         <article class="faq reveal">
-          <h3>Вы работаете ночью и в выходные?</h3>
-          <p>Да, служба работает круглосуточно без выходных. Срочные перевозки принимаем в любое время.</p>
+          <h3>В какие дни вы принимаете заявки?</h3>
+          <p>Заявки принимаем ежедневно, без выходных. Срочные выезды согласовываем по звонку.</p>
         </article>
         <article class="faq reveal">
           <h3>Можно ли сопровождать пациента в машине?</h3>
-          <p>Да, в салоне предусмотрено место для сопровождающего родственника.</p>
+          <p>Да, в салоне предусмотрены 4 сопровождающих места для родственников.</p>
         </article>
         <article class="faq reveal">
           <h3>По каким направлениям работаете?</h3>
@@ -357,6 +375,8 @@
     document.addEventListener('DOMContentLoaded', loadReviewsPreview);
   </script>
 
+  <script src="site.js"></script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -374,8 +394,6 @@
       "https://edemleza.ru/inside.jpg",
       "https://edemleza.ru/images/webp/spencer-1632.webp",
       "https://edemleza.ru/SpencerStretcher.jpg",
-      "https://edemleza.ru/images/webp/wheelchair-1200.webp",
-      "https://edemleza.ru/WheelchairTransportation.jpg",
       "https://edemleza.ru/images/webp/visit-1098.webp",
       "https://edemleza.ru/visit.jpg"
     ],
@@ -412,7 +430,7 @@
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5",
-      "reviewCount": "27",
+      "reviewCount": "39",
       "bestRating": "5",
       "worstRating": "5"
     },
@@ -504,6 +522,9 @@
     "primaryImageOfPage": {
       "@id": "https://edemleza.ru/#image-ford-transit"
     },
+    "breadcrumb": {
+      "@id": "https://edemleza.ru/#breadcrumb"
+    },
     "inLanguage": "ru"
   }
   </script>
@@ -528,9 +549,8 @@
           { "@id": "https://edemleza.ru/#image-ford-transit" },
           { "@id": "https://edemleza.ru/#image-fiat-ducato" },
           { "@id": "https://edemleza.ru/#image-inside" },
-          { "@id": "https://edemleza.ru/#image-spencer" },
-          { "@id": "https://edemleza.ru/#image-wheelchair" },
-          { "@id": "https://edemleza.ru/#image-visit" }
+          { "@id": "https://edemleza.ru/#image-visit" },
+          { "@id": "https://edemleza.ru/#image-spencer" }
         ]
       },
       {
@@ -573,7 +593,7 @@
         "url": "https://edemleza.ru/inside.jpg",
         "contentUrl": "https://edemleza.ru/images/webp/inside-2625.webp",
         "thumbnailUrl": "https://edemleza.ru/inside.jpg",
-        "caption": "Оснащенный салон для перевозки лежачих больных с местом для сопровождающего",
+        "caption": "Оснащенный салон для перевозки лежачих больных с четырьмя местами для сопровождающих",
         "isPartOf": {
           "@id": "https://edemleza.ru/#fleet-gallery"
         },
@@ -597,22 +617,6 @@
         "encodingFormat": "image/webp",
         "width": 1632,
         "height": 1440
-      },
-      {
-        "@type": "ImageObject",
-        "@id": "https://edemleza.ru/#image-wheelchair",
-        "name": "Перевозка маломобильных в инвалидной коляске",
-        "url": "https://edemleza.ru/WheelchairTransportation.jpg",
-        "contentUrl": "https://edemleza.ru/images/webp/wheelchair-1200.webp",
-        "thumbnailUrl": "https://edemleza.ru/WheelchairTransportation.jpg",
-        "caption": "Перевозка маломобильных пациентов по Казани и Республике Татарстан",
-        "isPartOf": {
-          "@id": "https://edemleza.ru/#fleet-gallery"
-        },
-        "inLanguage": "ru",
-        "encodingFormat": "image/webp",
-        "width": 1200,
-        "height": 1200
       },
       {
         "@type": "ImageObject",
@@ -641,10 +645,10 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Вы работаете ночью и в выходные?",
+        "name": "В какие дни вы принимаете заявки?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Да, служба перевозки лежачих больных работает круглосуточно без выходных."
+          "text": "Заявки принимаем ежедневно, без выходных. Срочные выезды согласовываем по звонку."
         }
       },
       {
@@ -652,7 +656,7 @@
         "name": "Можно ли сопровождать пациента в машине?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Да, в салоне есть место для сопровождающего родственника."
+          "text": "Да, в салоне предусмотрены четыре сопровождающих места для родственников."
         }
       },
       {
@@ -666,6 +670,24 @@
     ]
   }
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://edemleza.ru/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Главная",
+        "item": "https://edemleza.ru/"
+      }
+    ]
+  }
+  </script>
 </body>
 </html>
+
+
 
