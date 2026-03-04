@@ -111,7 +111,7 @@
           </div>
           <aside class="panel" aria-label="Средняя оценка">
             <h2>Средняя оценка 5.0</h2>
-            <p>По опубликованным отзывам клиентов. Источник части отзывов: Avito.</p>
+            <p>По опубликованным отзывам клиентов.</p>
           </aside>
         </div>
       </div>
@@ -177,7 +177,7 @@
           <article class="review reveal">
             <p>${'★'.repeat(review.stars || 5)}${'☆'.repeat(5 - (review.stars || 5))}</p>
             <p>"${review.text}"</p>
-            <span>${review.author}, ${review.date}. Источник: ${review.source || 'Клиенты'}</span>
+            <span>${review.author}, ${review.date}</span>
           </article>
         `).join('');
       }
