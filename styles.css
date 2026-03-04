@@ -408,7 +408,6 @@ img {
   padding-bottom: 6px;
   scrollbar-width: thin;
   -webkit-overflow-scrolling: touch;
-  touch-action: manipulation;
   overscroll-behavior-x: contain;
 }
 
@@ -1106,7 +1105,6 @@ img {
     padding-bottom: 2px;
     scrollbar-width: thin;
     -webkit-overflow-scrolling: touch;
-    touch-action: manipulation;
     overscroll-behavior-x: contain;
   }
 
@@ -1118,11 +1116,10 @@ img {
     display: flex;
     overflow-x: auto;
     gap: 12px;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x proximity;
     padding-bottom: 6px;
     scrollbar-width: thin;
     -webkit-overflow-scrolling: touch;
-    touch-action: manipulation;
     overscroll-behavior-x: contain;
   }
 
