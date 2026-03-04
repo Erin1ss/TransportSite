@@ -46,10 +46,19 @@
     if (!document.querySelector(".mobile-top-cta")) return;
 
     const mobile = window.matchMedia("(max-width: 720px)");
+    const brandbar = document.querySelector(".brandbar");
     let lastY = window.scrollY;
     let ticking = false;
 
+    function syncHeaderOffset() {
+      const fallback = 96;
+      const headerHeight = brandbar ? Math.ceil(brandbar.getBoundingClientRect().height) : fallback;
+      document.documentElement.style.setProperty("--mobile-brandbar-height", `${Math.max(headerHeight, fallback)}px`);
+    }
+
     function update() {
+      syncHeaderOffset();
+
       if (!mobile.matches) {
         document.body.classList.remove("mobile-top-cta-visible");
         lastY = window.scrollY;
@@ -66,6 +75,7 @@
 
     document.body.classList.add("mobile-top-cta-visible");
     window.addEventListener("resize", update);
+    window.addEventListener("orientationchange", update);
     window.addEventListener(
       "scroll",
       () => {

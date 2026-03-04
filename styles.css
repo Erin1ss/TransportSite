@@ -897,7 +897,7 @@ img {
   .mobile-top-cta {
     display: block;
     position: sticky;
-    top: 66px;
+    top: var(--mobile-brandbar-height, 96px);
     z-index: 13;
     background: rgba(247, 249, 248, 0.96);
     backdrop-filter: blur(6px);
