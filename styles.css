@@ -785,6 +785,27 @@ img {
   color: #27444a;
 }
 
+.map-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 8px;
+  box-shadow: 0 10px 24px rgba(20, 48, 52, 0.1);
+}
+
+.map-frame {
+  width: 100%;
+  height: clamp(280px, 42vw, 460px);
+  border: 0;
+  border-radius: 10px;
+  display: block;
+}
+
+.map-note {
+  margin: 12px 0 0;
+  color: #3e565c;
+}
+
 .audience-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

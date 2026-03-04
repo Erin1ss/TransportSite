@@ -97,6 +97,7 @@
   <nav class="mobile-section-nav" aria-label="Навигация по разделам">
     <div class="container">
       <a href="#contact-methods-heading">Связь</a>
+      <a href="#map-heading">На карте</a>
       <a href="#prep-heading">Подготовка</a>
       <a href="#directions-heading">Направления</a>
       <a href="testimonials.html">Отзывы</a>
@@ -161,6 +162,22 @@
             </div>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="map-heading">
+      <div class="container">
+        <h2 class="section-title reveal" id="map-heading">Где мы находимся</h2>
+        <p class="section-lead reveal">Работаем по всей Казани и Республике Татарстан. Для ориентира указали точку в центре города рядом с площадью Тукая.</p>
+        <div class="map-card reveal">
+          <iframe
+            class="map-frame"
+            title="Карта расположения службы ЕдемЛежа в Казани"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=49.081%2C55.775%2C49.143%2C55.805&layer=mapnik&marker=55.7887%2C49.1221"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p class="map-note reveal">Ориентир для подачи: район площади Тукая, Казань. Точный адрес подачи согласовываем по телефону <a href="tel:+79652595912">+7 (965) 259-59-12</a>.</p>
       </div>
     </section>
 
@@ -230,6 +247,12 @@
         "addressRegion": "Республика Татарстан",
         "addressCountry": "RU"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 55.7887,
+        "longitude": 49.1221
+      },
+      "hasMap": "https://www.openstreetmap.org/?mlat=55.7887&mlon=49.1221#map=15/55.7887/49.1221",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+79652595912",
