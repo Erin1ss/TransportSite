@@ -20,6 +20,8 @@
   <meta property="og:url" content="https://edemleza.ru/">
   <meta property="og:site_name" content="ЕдемЛежа">
   <meta property="og:image" content="https://edemleza.ru/OpenGraph.png">
+  <meta property="og:image:secure_url" content="https://edemleza.ru/OpenGraph.png">
+  <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Перевозка лежачих больных в Казани">
@@ -28,6 +30,7 @@
   <meta name="twitter:title" content="Перевозка лежачих больных в Казани - ЕдемЛежа">
   <meta name="twitter:description" content="Круглосуточная транспортировка лежачих больных в Казани и по Татарстану.">
   <meta name="twitter:image" content="https://edemleza.ru/OpenGraph.png">
+  <meta name="twitter:image:alt" content="Служба перевозки лежачих больных ЕдемЛежа в Казани">
 
   <link rel="icon" href="https://edemleza.ru/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" href="/favicon.png">
@@ -36,6 +39,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/webp/ford-transit-2084.webp" imagesrcset="images/webp/ford-transit-960.webp 960w, images/webp/ford-transit-1500.webp 1500w, images/webp/ford-transit-2084.webp 2084w" imagesizes="(max-width: 720px) 100vw, (max-width: 980px) 100vw, 64vw">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -90,39 +94,120 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" aria-labelledby="fleet-heading">
       <div class="container">
-        <h2 class="section-title reveal">Санитарный транспорт и оснащение</h2>
+        <h2 class="section-title reveal" id="fleet-heading">Санитарный транспорт и оснащение</h2>
         <p class="section-lead reveal">Используем автомобили, подготовленные для медицинской транспортировки, и оборудование для безопасного перемещения пациента.</p>
-        <div class="cards">
-          <article class="card reveal">
-            <img src="FordTransit.jpg" width="2084" height="1172" loading="lazy" alt="Санитарный автомобиль Ford Transit для перевозки лежачих больных в Казани">
-            <div class="card-body">
-              <h3>Ford Transit</h3>
-              <p>Просторный салон, фиксация оборудования, стабильный ход для комфортной поездки по городу и между населенными пунктами.</p>
+        <p class="gallery-note reveal">Фотографии техники публикуем без обрезания кадров: вы видите реальный формат салона, каталок и условий перевозки.</p>
+        <div class="photo-composition">
+          <figure class="photo-tile photo-tile--featured reveal">
+            <div class="photo-frame photo-frame--featured">
+              <a class="photo-link" href="FordTransit.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть фото Ford Transit в полном размере">
+                <picture class="photo-picture">
+                  <source
+                    type="image/webp"
+                    srcset="images/webp/ford-transit-960.webp 960w, images/webp/ford-transit-1500.webp 1500w, images/webp/ford-transit-2084.webp 2084w"
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 100vw, 64vw">
+                  <source
+                    type="image/jpeg"
+                    srcset="images/jpg/ford-transit-960.jpg 960w, images/jpg/ford-transit-1500.jpg 1500w, FordTransit.jpg 2084w"
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 100vw, 64vw">
+                  <img class="photo-image" src="FordTransit.jpg" srcset="images/jpg/ford-transit-960.jpg 960w, images/jpg/ford-transit-1500.jpg 1500w, FordTransit.jpg 2084w" sizes="(max-width: 720px) 100vw, (max-width: 980px) 100vw, 64vw" width="2084" height="1172" loading="eager" decoding="async" fetchpriority="high" alt="Санитарный автомобиль Ford Transit для перевозки лежачих больных в Казани">
+                </picture>
+              </a>
             </div>
-          </article>
-          <article class="card reveal">
-            <img src="FiatDucatoAmbulance.jpg" width="1200" height="799" loading="lazy" alt="Санитарный автомобиль Fiat Ducato для медицинской транспортировки пациентов">
-            <div class="card-body">
-              <h3>Fiat Ducato</h3>
-              <p>Комфортный микроклимат, удобная посадка сопровождающего и достаточное пространство для безопасной транспортировки.</p>
+            <figcaption class="photo-caption"><strong>Ford Transit</strong> Просторный салон и плавный ход для бережной перевозки пациента по городу и между населенными пунктами.</figcaption>
+          </figure>
+          <figure class="photo-tile photo-tile--wide reveal">
+            <div class="photo-frame photo-frame--wide">
+              <a class="photo-link" href="FiatDucatoAmbulance.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть фото Fiat Ducato в полном размере">
+                <picture class="photo-picture">
+                  <source
+                    type="image/webp"
+                    srcset="images/webp/fiat-ducato-900.webp 900w, images/webp/fiat-ducato-1219.webp 1219w"
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 33vw">
+                  <source
+                    type="image/jpeg"
+                    srcset="images/jpg/fiat-ducato-900.jpg 900w, FiatDucatoAmbulance.jpg 1219w"
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 33vw">
+                  <img class="photo-image" src="FiatDucatoAmbulance.jpg" srcset="images/jpg/fiat-ducato-900.jpg 900w, FiatDucatoAmbulance.jpg 1219w" sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 33vw" width="1219" height="713" loading="lazy" decoding="async" fetchpriority="low" alt="Санитарный автомобиль Fiat Ducato для медицинской транспортировки пациентов">
+                </picture>
+              </a>
             </div>
-          </article>
-          <article class="card reveal">
-            <img src="SpencerStretcher.jpg" width="1000" height="625" loading="lazy" alt="Медицинская каталка Spencer для безопасной перевозки лежачих пациентов">
-            <div class="card-body">
-              <h3>Каталка и фиксация</h3>
-              <p>Профессиональная каталка и ремни безопасности помогают мягко и надежно переместить пациента.</p>
+            <figcaption class="photo-caption"><strong>Fiat Ducato</strong> Комфортный микроклимат и удобное место для сопровождающего родственника в пути.</figcaption>
+          </figure>
+          <figure class="photo-tile photo-tile--side reveal">
+            <div class="photo-frame photo-frame--side">
+              <a class="photo-link" href="inside.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть фото салона в полном размере">
+                <picture class="photo-picture">
+                  <source
+                    type="image/webp"
+                    srcset="images/webp/inside-960.webp 960w, images/webp/inside-1600.webp 1600w, images/webp/inside-2625.webp 2625w"
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 33vw">
+                  <source
+                    type="image/jpeg"
+                    srcset="images/jpg/inside-960.jpg 960w, images/jpg/inside-1600.jpg 1600w, inside.jpg 2625w"
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 33vw">
+                  <img class="photo-image" src="inside.jpg" srcset="images/jpg/inside-960.jpg 960w, images/jpg/inside-1600.jpg 1600w, inside.jpg 2625w" sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 33vw" width="2625" height="1440" loading="lazy" decoding="async" fetchpriority="low" alt="Внутреннее пространство санитарного автомобиля для транспортировки лежачих больных">
+                </picture>
+              </a>
             </div>
-          </article>
-          <article class="card reveal">
-            <img src="WheelchairTransportation.jpg" width="1280" height="853" loading="lazy" alt="Перевозка инвалидов и маломобильных людей в колясках по Казани и Татарстану">
-            <div class="card-body">
-              <h3>Перевозка маломобильных людей</h3>
-              <p>Организуем транспортировку пассажиров в инвалидных колясках, включая помощь при посадке и сопровождении.</p>
+            <figcaption class="photo-caption"><strong>Оснащенный салон</strong> Надежная фиксация оборудования и комфортное пространство для пациента и сопровождающего.</figcaption>
+          </figure>
+          <figure class="photo-tile photo-tile--small photo-tile--small-a reveal">
+            <div class="photo-frame photo-frame--small">
+              <a class="photo-link" href="SpencerStretcher.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть фото каталки Spencer в полном размере">
+                <picture class="photo-picture">
+                  <source
+                    type="image/webp"
+                    srcset="images/webp/spencer-900.webp 900w, images/webp/spencer-1400.webp 1400w, images/webp/spencer-1632.webp 1632w"
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw">
+                  <source
+                    type="image/jpeg"
+                    srcset="images/jpg/spencer-900.jpg 900w, images/jpg/spencer-1400.jpg 1400w, SpencerStretcher.jpg 1632w"
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw">
+                  <img class="photo-image" src="SpencerStretcher.jpg" srcset="images/jpg/spencer-900.jpg 900w, images/jpg/spencer-1400.jpg 1400w, SpencerStretcher.jpg 1632w" sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw" width="1632" height="1440" loading="lazy" decoding="async" fetchpriority="low" alt="Медицинская каталка Spencer для безопасной перевозки лежачих пациентов">
+                </picture>
+              </a>
             </div>
-          </article>
+            <figcaption class="photo-caption"><strong>Каталка Spencer</strong> Профессиональная перевозочная система с мягкой фиксацией для безопасного перемещения пациента.</figcaption>
+          </figure>
+          <figure class="photo-tile photo-tile--small photo-tile--small-b reveal">
+            <div class="photo-frame photo-frame--small">
+              <a class="photo-link" href="WheelchairTransportation.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть фото перевозки в инвалидной коляске в полном размере">
+                <picture class="photo-picture">
+                  <source
+                    type="image/webp"
+                    srcset="images/webp/wheelchair-900.webp 900w, images/webp/wheelchair-1200.webp 1200w"
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw">
+                  <source
+                    type="image/jpeg"
+                    srcset="images/jpg/wheelchair-900.jpg 900w, WheelchairTransportation.jpg 1200w"
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw">
+                  <img class="photo-image" src="WheelchairTransportation.jpg" srcset="images/jpg/wheelchair-900.jpg 900w, WheelchairTransportation.jpg 1200w" sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw" width="1200" height="1200" loading="lazy" decoding="async" fetchpriority="low" alt="Перевозка маломобильных пациентов в инвалидной коляске по Казани и Татарстану">
+                </picture>
+              </a>
+            </div>
+            <figcaption class="photo-caption"><strong>Перевозка маломобильных</strong> Помощь при посадке и сопровождении людей в инвалидных колясках.</figcaption>
+          </figure>
+          <figure class="photo-tile photo-tile--small photo-tile--small-c reveal">
+            <div class="photo-frame photo-frame--small">
+              <a class="photo-link" href="visit.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть фото перевозки от кровати до кровати в полном размере">
+                <picture class="photo-picture">
+                  <source
+                    type="image/webp"
+                    srcset="images/webp/visit-900.webp 900w, images/webp/visit-1098.webp 1098w"
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw">
+                  <source
+                    type="image/jpeg"
+                    srcset="images/jpg/visit-900.jpg 900w, visit.jpg 1098w"
+                    sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw">
+                  <img class="photo-image" src="visit.jpg" srcset="images/jpg/visit-900.jpg 900w, visit.jpg 1098w" sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 32vw" width="1098" height="626" loading="lazy" decoding="async" fetchpriority="low" alt="Бригада помогает пациенту при транспортировке от кровати до кровати">
+                </picture>
+              </a>
+            </div>
+            <figcaption class="photo-caption"><strong>От кровати до кровати</strong> Бригада аккуратно выполняет перенос на всех этапах маршрута.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -276,11 +361,31 @@
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://edemleza.ru/#organization",
     "name": "ЕдемЛежа",
     "description": "Профессиональная служба перевозки лежачих больных от кровати до кровати в Казани и Республике Татарстан",
-    "image": "https://edemleza.ru/OpenGraph.png",
+    "image": [
+      "https://edemleza.ru/OpenGraph.png",
+      "https://edemleza.ru/images/webp/ford-transit-2084.webp",
+      "https://edemleza.ru/FordTransit.jpg",
+      "https://edemleza.ru/images/webp/fiat-ducato-1219.webp",
+      "https://edemleza.ru/FiatDucatoAmbulance.jpg",
+      "https://edemleza.ru/images/webp/inside-2625.webp",
+      "https://edemleza.ru/inside.jpg",
+      "https://edemleza.ru/images/webp/spencer-1632.webp",
+      "https://edemleza.ru/SpencerStretcher.jpg",
+      "https://edemleza.ru/images/webp/wheelchair-1200.webp",
+      "https://edemleza.ru/WheelchairTransportation.jpg",
+      "https://edemleza.ru/images/webp/visit-1098.webp",
+      "https://edemleza.ru/visit.jpg"
+    ],
+    "hasPart": {
+      "@id": "https://edemleza.ru/#fleet-gallery"
+    },
     "url": "https://edemleza.ru/",
-    "mainEntityOfPage": "https://edemleza.ru/",
+    "mainEntityOfPage": {
+      "@id": "https://edemleza.ru/#webpage"
+    },
     "inLanguage": "ru",
     "telephone": "+79652595912",
     "priceRange": "$$",
@@ -377,8 +482,155 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://edemleza.ru/#website",
     "name": "ЕдемЛежа",
     "url": "https://edemleza.ru/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://edemleza.ru/#webpage",
+    "url": "https://edemleza.ru/",
+    "name": "Перевозка лежачих больных в Казани - ЕдемЛежа",
+    "isPartOf": {
+      "@id": "https://edemleza.ru/#website"
+    },
+    "about": {
+      "@id": "https://edemleza.ru/#organization"
+    },
+    "primaryImageOfPage": {
+      "@id": "https://edemleza.ru/#image-ford-transit"
+    },
+    "inLanguage": "ru"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ImageGallery",
+        "@id": "https://edemleza.ru/#fleet-gallery",
+        "name": "Фотогалерея санитарного транспорта и оснащения",
+        "url": "https://edemleza.ru/#fleet-heading",
+        "mainEntityOfPage": {
+          "@id": "https://edemleza.ru/#webpage"
+        },
+        "inLanguage": "ru",
+        "about": {
+          "@id": "https://edemleza.ru/#organization"
+        },
+        "associatedMedia": [
+          { "@id": "https://edemleza.ru/#image-ford-transit" },
+          { "@id": "https://edemleza.ru/#image-fiat-ducato" },
+          { "@id": "https://edemleza.ru/#image-inside" },
+          { "@id": "https://edemleza.ru/#image-spencer" },
+          { "@id": "https://edemleza.ru/#image-wheelchair" },
+          { "@id": "https://edemleza.ru/#image-visit" }
+        ]
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://edemleza.ru/#image-ford-transit",
+        "name": "Санитарный автомобиль Ford Transit",
+        "url": "https://edemleza.ru/FordTransit.jpg",
+        "contentUrl": "https://edemleza.ru/images/webp/ford-transit-2084.webp",
+        "thumbnailUrl": "https://edemleza.ru/FordTransit.jpg",
+        "caption": "Санитарный автомобиль Ford Transit для перевозки лежачих больных в Казани",
+        "isPartOf": {
+          "@id": "https://edemleza.ru/#fleet-gallery"
+        },
+        "representativeOfPage": true,
+        "inLanguage": "ru",
+        "encodingFormat": "image/webp",
+        "width": 2084,
+        "height": 1172
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://edemleza.ru/#image-fiat-ducato",
+        "name": "Санитарный автомобиль Fiat Ducato",
+        "url": "https://edemleza.ru/FiatDucatoAmbulance.jpg",
+        "contentUrl": "https://edemleza.ru/images/webp/fiat-ducato-1219.webp",
+        "thumbnailUrl": "https://edemleza.ru/FiatDucatoAmbulance.jpg",
+        "caption": "Санитарный автомобиль Fiat Ducato для медицинской транспортировки пациентов",
+        "isPartOf": {
+          "@id": "https://edemleza.ru/#fleet-gallery"
+        },
+        "inLanguage": "ru",
+        "encodingFormat": "image/webp",
+        "width": 1219,
+        "height": 713
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://edemleza.ru/#image-inside",
+        "name": "Внутреннее пространство санитарного автомобиля",
+        "url": "https://edemleza.ru/inside.jpg",
+        "contentUrl": "https://edemleza.ru/images/webp/inside-2625.webp",
+        "thumbnailUrl": "https://edemleza.ru/inside.jpg",
+        "caption": "Оснащенный салон для перевозки лежачих больных с местом для сопровождающего",
+        "isPartOf": {
+          "@id": "https://edemleza.ru/#fleet-gallery"
+        },
+        "inLanguage": "ru",
+        "encodingFormat": "image/webp",
+        "width": 2625,
+        "height": 1440
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://edemleza.ru/#image-spencer",
+        "name": "Медицинская каталка Spencer",
+        "url": "https://edemleza.ru/SpencerStretcher.jpg",
+        "contentUrl": "https://edemleza.ru/images/webp/spencer-1632.webp",
+        "thumbnailUrl": "https://edemleza.ru/SpencerStretcher.jpg",
+        "caption": "Профессиональная каталка Spencer для безопасного перемещения пациента",
+        "isPartOf": {
+          "@id": "https://edemleza.ru/#fleet-gallery"
+        },
+        "inLanguage": "ru",
+        "encodingFormat": "image/webp",
+        "width": 1632,
+        "height": 1440
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://edemleza.ru/#image-wheelchair",
+        "name": "Перевозка маломобильных в инвалидной коляске",
+        "url": "https://edemleza.ru/WheelchairTransportation.jpg",
+        "contentUrl": "https://edemleza.ru/images/webp/wheelchair-1200.webp",
+        "thumbnailUrl": "https://edemleza.ru/WheelchairTransportation.jpg",
+        "caption": "Перевозка маломобильных пациентов по Казани и Республике Татарстан",
+        "isPartOf": {
+          "@id": "https://edemleza.ru/#fleet-gallery"
+        },
+        "inLanguage": "ru",
+        "encodingFormat": "image/webp",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://edemleza.ru/#image-visit",
+        "name": "Сопровождение пациента от кровати до кровати",
+        "url": "https://edemleza.ru/visit.jpg",
+        "contentUrl": "https://edemleza.ru/images/webp/visit-1098.webp",
+        "thumbnailUrl": "https://edemleza.ru/visit.jpg",
+        "caption": "Бригада помогает пациенту при переносе и транспортировке",
+        "isPartOf": {
+          "@id": "https://edemleza.ru/#fleet-gallery"
+        },
+        "inLanguage": "ru",
+        "encodingFormat": "image/webp",
+        "width": 1098,
+        "height": 626
+      }
+    ]
   }
   </script>
 

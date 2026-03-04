@@ -2,20 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         <loc>https://edemleza.ru/</loc>
-        <lastmod>2025-02-23</lastmod>
+        <lastmod>2026-03-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <image:image>
+            <image:loc>https://edemleza.ru/images/webp/ford-transit-2084.webp</image:loc>
+            <image:title>Санитарный автомобиль Ford Transit</image:title>
+            <image:caption>Санитарный автомобиль Ford Transit для перевозки лежачих больных в Казани</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://edemleza.ru/FordTransit.jpg</image:loc>
+            <image:title>Санитарный автомобиль Ford Transit (оригинал)</image:title>
+            <image:caption>Оригинальное фото санитарного автомобиля Ford Transit</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://edemleza.ru/images/webp/fiat-ducato-1219.webp</image:loc>
+            <image:title>Санитарный автомобиль Fiat Ducato</image:title>
+            <image:caption>Санитарный автомобиль Fiat Ducato для медицинской транспортировки пациентов</image:caption>
+        </image:image>
+        <image:image>
             <image:loc>https://edemleza.ru/FiatDucatoAmbulance.jpg</image:loc>
+            <image:title>Санитарный автомобиль Fiat Ducato (оригинал)</image:title>
+            <image:caption>Оригинальное фото санитарного автомобиля Fiat Ducato</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://edemleza.ru/images/webp/inside-2625.webp</image:loc>
+            <image:title>Оснащенный салон санитарного автомобиля</image:title>
+            <image:caption>Внутреннее пространство санитарного автомобиля для перевозки лежачих больных</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://edemleza.ru/inside.jpg</image:loc>
+            <image:title>Оснащенный салон санитарного автомобиля (оригинал)</image:title>
+            <image:caption>Оригинальное фото внутреннего пространства санитарного автомобиля</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://edemleza.ru/images/webp/spencer-1632.webp</image:loc>
+            <image:title>Медицинская каталка Spencer</image:title>
+            <image:caption>Профессиональная каталка Spencer для безопасной перевозки лежачих пациентов</image:caption>
         </image:image>
         <image:image>
             <image:loc>https://edemleza.ru/SpencerStretcher.jpg</image:loc>
+            <image:title>Медицинская каталка Spencer (оригинал)</image:title>
+            <image:caption>Оригинальное фото медицинской каталки Spencer</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://edemleza.ru/images/webp/wheelchair-1200.webp</image:loc>
+            <image:title>Перевозка маломобильных пациентов</image:title>
+            <image:caption>Перевозка маломобильных людей в инвалидной коляске по Казани и Татарстану</image:caption>
         </image:image>
         <image:image>
             <image:loc>https://edemleza.ru/WheelchairTransportation.jpg</image:loc>
+            <image:title>Перевозка маломобильных пациентов (оригинал)</image:title>
+            <image:caption>Оригинальное фото перевозки маломобильных пациентов</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://edemleza.ru/images/webp/visit-1098.webp</image:loc>
+            <image:title>Перенос пациента от кровати до кровати</image:title>
+            <image:caption>Бригада помогает пациенту при транспортировке от кровати до кровати</image:caption>
         </image:image>
         <image:image>
             <image:loc>https://edemleza.ru/visit.jpg</image:loc>
+            <image:title>Перенос пациента от кровати до кровати (оригинал)</image:title>
+            <image:caption>Оригинальное фото переноса пациента бригадой</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://edemleza.ru/OpenGraph.png</image:loc>
+            <image:title>Перевозка лежачих больных в Казани - ЕдемЛежа</image:title>
+            <image:caption>Официальное изображение сайта службы медицинской транспортировки</image:caption>
         </image:image>
     </url>
     <url>
