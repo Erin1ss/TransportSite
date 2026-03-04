@@ -298,6 +298,34 @@ img {
   font-size: 15px;
 }
 
+@media (min-width: 721px) {
+  .panel--relatives {
+    justify-self: start;
+    align-self: end;
+    margin-top: 26px;
+    width: fit-content;
+    max-width: 40ch;
+    padding: 16px 18px;
+    border: 1px solid #9fd1c6;
+    border-radius: 14px;
+    background: linear-gradient(160deg, #e9f8f2, #d6efe5);
+    box-shadow: 0 8px 20px rgba(29, 85, 70, 0.12);
+    color: #103f35;
+  }
+
+  .panel--relatives h2 {
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: #0f4a3d;
+  }
+
+  .panel--relatives p {
+    color: #1d4f45;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
 .quick-links {
   margin-top: 16px;
   display: flex;
