@@ -895,9 +895,9 @@ img {
   }
 
   .mobile-top-cta {
-    display: block;
+    display: none;
     position: sticky;
-    top: var(--mobile-brandbar-height, 96px);
+    top: calc(var(--mobile-brandbar-height, 96px) + 8px);
     z-index: 13;
     background: rgba(247, 249, 248, 0.96);
     backdrop-filter: blur(6px);
@@ -909,7 +909,8 @@ img {
     transition: transform 0.22s ease, opacity 0.22s ease;
   }
 
-  body.mobile-top-cta-visible .mobile-top-cta {
+  .mobile-top-cta.is-visible {
+    display: block;
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;

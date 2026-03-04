@@ -62,7 +62,7 @@
       syncHeaderOffset();
 
       if (!mobile.matches) {
-        document.body.classList.remove("mobile-top-cta-visible");
+        mobileTopCta.classList.remove("is-visible");
         lastY = window.scrollY;
         return;
       }
@@ -79,12 +79,12 @@
       }
 
       const shouldShow = isGoingUp && y > showAfter && !heroButtonVisible;
-      document.body.classList.toggle("mobile-top-cta-visible", shouldShow);
+      mobileTopCta.classList.toggle("is-visible", shouldShow);
       lastY = y;
       ticking = false;
     }
 
-    document.body.classList.remove("mobile-top-cta-visible");
+    mobileTopCta.classList.remove("is-visible");
     window.addEventListener("resize", update);
     window.addEventListener("orientationchange", update);
     window.addEventListener(
