@@ -317,6 +317,8 @@ img {
 
   .panel--carded .relatives-card {
     margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 5px;
     width: min(100%, 382px);
   }

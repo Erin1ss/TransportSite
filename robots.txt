@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Host: edemleza.ru
 
 Sitemap: https://edemleza.ru/sitemap.xml
