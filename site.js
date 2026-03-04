@@ -49,8 +49,10 @@
     const mobile = window.matchMedia("(max-width: 720px)");
     const brandbar = document.querySelector(".brandbar");
     const heroCallButton = document.querySelector('.hero .button.primary[href^="tel:"]');
-    let lastY = window.scrollY;
+    let anchoredY = window.scrollY;
+    let isVisible = false;
     let ticking = false;
+    const directionThreshold = 10;
 
     function syncHeaderOffset() {
       const fallback = 96;
@@ -58,17 +60,23 @@
       document.documentElement.style.setProperty("--mobile-brandbar-height", `${Math.max(headerHeight, fallback)}px`);
     }
 
+    function setVisible(nextVisible) {
+      if (isVisible === nextVisible) return;
+      isVisible = nextVisible;
+      mobileTopCta.classList.toggle("is-visible", isVisible);
+    }
+
     function update() {
       syncHeaderOffset();
+      const y = window.scrollY;
 
       if (!mobile.matches) {
-        mobileTopCta.classList.remove("is-visible");
-        lastY = window.scrollY;
+        setVisible(false);
+        anchoredY = y;
+        ticking = false;
         return;
       }
 
-      const y = window.scrollY;
-      const isGoingUp = y < lastY;
       const showAfter = Math.max(Math.round(window.innerHeight * 0.35), 180);
       const headerBottom = brandbar ? brandbar.getBoundingClientRect().bottom : 0;
       let heroButtonVisible = false;
@@ -78,13 +86,26 @@
         heroButtonVisible = rect.bottom > headerBottom && rect.top < window.innerHeight;
       }
 
-      const shouldShow = isGoingUp && y > showAfter && !heroButtonVisible;
-      mobileTopCta.classList.toggle("is-visible", shouldShow);
-      lastY = y;
+      const deltaFromAnchor = y - anchoredY;
+      const isGoingUp = deltaFromAnchor <= -directionThreshold;
+      const isGoingDown = deltaFromAnchor >= directionThreshold;
+
+      if (isGoingUp || isGoingDown) {
+        anchoredY = y;
+      }
+
+      let shouldShow = isVisible;
+      if (y <= showAfter || heroButtonVisible || isGoingDown) {
+        shouldShow = false;
+      } else if (isGoingUp) {
+        shouldShow = true;
+      }
+
+      setVisible(shouldShow);
       ticking = false;
     }
 
-    mobileTopCta.classList.remove("is-visible");
+    setVisible(false);
     window.addEventListener("resize", update);
     window.addEventListener("orientationchange", update);
     window.addEventListener(
