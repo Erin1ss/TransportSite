@@ -304,9 +304,9 @@ img {
     align-self: end;
     margin-top: 44px;
     width: fit-content;
-    max-width: 40ch;
+    max-width: 46ch;
     height: max-content;
-    padding: 16px 18px;
+    padding: 13px 16px;
     border: 1px solid #2b5d5f;
     border-radius: 14px;
     background: #11393b;
@@ -315,7 +315,7 @@ img {
   }
 
   .panel--relatives h2 {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     font-size: 20px;
     color: #ecfffc;
   }
@@ -323,12 +323,12 @@ img {
   .panel--relatives p {
     color: #d3ece8;
     font-size: 15px;
-    line-height: 1.5;
+    line-height: 1.45;
   }
 
   .relatives-card {
-    margin-top: 12px;
-    padding: 6px;
+    margin-top: 10px;
+    padding: 5px;
     border: 1px solid rgba(183, 224, 216, 0.42);
     border-radius: 12px;
     background: rgba(230, 247, 242, 0.08);
