@@ -43,10 +43,12 @@
   }
 
   function setupMobileTopCta() {
-    if (!document.querySelector(".mobile-top-cta")) return;
+    const mobileTopCta = document.querySelector(".mobile-top-cta");
+    if (!mobileTopCta) return;
 
     const mobile = window.matchMedia("(max-width: 720px)");
     const brandbar = document.querySelector(".brandbar");
+    const heroCallButton = document.querySelector('.hero .button.primary[href^="tel:"]');
     let lastY = window.scrollY;
     let ticking = false;
 
@@ -67,13 +69,22 @@
 
       const y = window.scrollY;
       const isGoingUp = y < lastY;
-      const nearTop = y < 12;
-      document.body.classList.toggle("mobile-top-cta-visible", isGoingUp || nearTop);
+      const showAfter = Math.max(Math.round(window.innerHeight * 0.35), 180);
+      const headerBottom = brandbar ? brandbar.getBoundingClientRect().bottom : 0;
+      let heroButtonVisible = false;
+
+      if (heroCallButton) {
+        const rect = heroCallButton.getBoundingClientRect();
+        heroButtonVisible = rect.bottom > headerBottom && rect.top < window.innerHeight;
+      }
+
+      const shouldShow = isGoingUp && y > showAfter && !heroButtonVisible;
+      document.body.classList.toggle("mobile-top-cta-visible", shouldShow);
       lastY = y;
       ticking = false;
     }
 
-    document.body.classList.add("mobile-top-cta-visible");
+    document.body.classList.remove("mobile-top-cta-visible");
     window.addEventListener("resize", update);
     window.addEventListener("orientationchange", update);
     window.addEventListener(
