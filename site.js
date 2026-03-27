@@ -32,11 +32,10 @@
     }
   }
 
-  function enableDesktopPhoneCopy() {
-    const desktop = window.matchMedia("(min-width: 721px)");
+  function enableOptionalPhoneCopy() {
     document.addEventListener("click", (event) => {
-      const link = event.target.closest('a[href^="tel:"]');
-      if (!link || !desktop.matches) return;
+      const trigger = event.target.closest("[data-copy-phone]");
+      if (!trigger) return;
       event.preventDefault();
       copyPhone();
     });
@@ -121,7 +120,7 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    enableDesktopPhoneCopy();
+    enableOptionalPhoneCopy();
     setupMobileTopCta();
   });
 })();
