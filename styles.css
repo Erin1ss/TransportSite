@@ -942,6 +942,11 @@ img {
   padding-left: 24px;
 }
 
+.steps-list--cards {
+  list-style: none;
+  padding-left: 0;
+}
+
 .process-block .steps-list {
   gap: 14px;
 }
