@@ -1,5 +1,12 @@
 User-agent: *
 Allow: /
+Disallow: /*?*utm_
+Disallow: /*?*gclid=
+Disallow: /*?*fbclid=
+Disallow: /*?*ysclid=
+Disallow: /*?*yclid=
+Disallow: /*?*_openstat=
+Disallow: /*?*_ym_debug=
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&utm_id&gclid&fbclid&ysclid&yclid&_openstat&_ym_debug /
 Host: edemleza.ru
-
 Sitemap: https://edemleza.ru/sitemap.xml

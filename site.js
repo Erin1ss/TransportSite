@@ -1,6 +1,27 @@
-(() => {
+﻿(() => {
   const PHONE_DISPLAY = "+7 (965) 259-59-12";
+  const TRACKING_PARAMS = ["utm_", "gclid", "fbclid", "ysclid", "yclid", "_openstat", "_ym_debug"];
   let toastTimer = null;
+
+  function normalizeUrl() {
+    const url = new URL(window.location.href);
+    let changed = false;
+
+    for (const key of [...url.searchParams.keys()]) {
+      const isTracking = TRACKING_PARAMS.some((item) => key === item || key.startsWith(item));
+      if (!isTracking) continue;
+      url.searchParams.delete(key);
+      changed = true;
+    }
+
+    if (url.pathname.endsWith("/index.html")) {
+      url.pathname = url.pathname.slice(0, -"/index.html".length) || "/";
+      changed = true;
+    }
+
+    if (!changed) return;
+    window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+  }
 
   function ensureToast() {
     let toast = document.querySelector(".copy-toast");
@@ -32,10 +53,18 @@
     }
   }
 
-  function enableOptionalPhoneCopy() {
+  function enablePhoneCopy() {
+    const desktop = window.matchMedia("(min-width: 721px)");
     document.addEventListener("click", (event) => {
-      const trigger = event.target.closest("[data-copy-phone]");
-      if (!trigger) return;
+      const explicitTrigger = event.target.closest("[data-copy-phone]");
+      if (explicitTrigger) {
+        event.preventDefault();
+        copyPhone();
+        return;
+      }
+
+      const telLink = event.target.closest('a[href^="tel:"]');
+      if (!telLink || !desktop.matches) return;
       event.preventDefault();
       copyPhone();
     });
@@ -120,7 +149,8 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    enableOptionalPhoneCopy();
+    normalizeUrl();
+    enablePhoneCopy();
     setupMobileTopCta();
   });
 })();
