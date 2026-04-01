@@ -134,12 +134,23 @@ img {
 }
 
 .nav .cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
   background: var(--cta);
   color: #fff;
-  padding: 11px 18px;
+  padding: 13px 20px;
   border-radius: 999px;
   box-shadow: 0 10px 24px rgba(194, 65, 12, 0.32);
   font-weight: 800;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav .cta-btn:hover {
+  background: var(--cta-strong);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(154, 52, 18, 0.3);
 }
 
 .hero {
@@ -294,20 +305,30 @@ img {
   min-height: 46px;
   border-radius: 999px;
   overflow-wrap: anywhere;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .button.primary {
   background: var(--cta);
   color: #fff;
+  box-shadow: 0 10px 24px rgba(194, 65, 12, 0.24);
 }
 
 .button.primary:hover {
   background: var(--cta-strong);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(154, 52, 18, 0.24);
 }
 
 .button.secondary {
   border: 1px solid var(--line);
   background: #fff;
+}
+
+.button.secondary:hover {
+  border-color: #bccac4;
+  background: #f9fbfa;
+  transform: translateY(-1px);
 }
 
 .panel {
@@ -556,6 +577,13 @@ img {
   background: #fff;
   font-weight: 700;
   color: #24464b;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.internal-links a:hover {
+  border-color: #b9c9c3;
+  background: #f8fbfa;
+  transform: translateY(-1px);
 }
 
 .local-note {
@@ -910,6 +938,15 @@ img {
   padding: 0;
 }
 
+.steps-list > li::marker {
+  content: "";
+}
+
+.process-block .steps-list {
+  counter-reset: process-step;
+  gap: 14px;
+}
+
 .step,
 .step-card {
   background: var(--surface-soft);
@@ -923,11 +960,21 @@ img {
   padding-left: 58px;
 }
 
+.process-block .step-card {
+  min-height: 100%;
+  padding: 18px 18px 18px 62px;
+  background: linear-gradient(180deg, #ffffff, #f7f8f4);
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(21, 50, 54, 0.06);
+}
+
 .step strong,
 .step-card strong {
   display: block;
   color: var(--primary-strong);
   margin-bottom: 8px;
+  font-size: 17px;
+  line-height: 1.35;
 }
 
 .step-number {
@@ -946,9 +993,20 @@ img {
   font-weight: 800;
 }
 
+.process-block .step-number {
+  left: 18px;
+  top: 18px;
+  width: 30px;
+  height: 30px;
+  background: rgba(15, 118, 110, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(15, 118, 110, 0.12);
+}
+
 .step-copy {
   margin: 0;
   color: #365057;
+  font-size: 15px;
+  line-height: 1.55;
 }
 
 .reviews-grid {
@@ -1016,11 +1074,17 @@ img {
   padding: 0;
 }
 
+.semantic-list > li::marker {
+  content: "";
+}
+
 .list-item {
-  background: #fff;
+  min-height: 100%;
+  background: linear-gradient(180deg, #ffffff, #faf9f6);
   border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 14px;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 8px 18px rgba(21, 50, 54, 0.06);
   color: #365057;
 }
 
@@ -1028,10 +1092,14 @@ img {
   display: block;
   margin-bottom: 8px;
   color: #18363b;
+  font-size: 17px;
+  line-height: 1.35;
 }
 
 .list-item p {
   margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
 }
 
 .list-item ul {
@@ -1212,7 +1280,10 @@ img {
 
 .nav a:focus-visible,
 .button:focus-visible,
-.mobile-callbar a:focus-visible {
+.mobile-callbar a:focus-visible,
+.nav .cta-btn:focus-visible,
+.internal-links a:focus-visible,
+.mobile-top-cta a:focus-visible {
   outline: 3px solid rgba(15, 118, 110, 0.45);
   outline-offset: 2px;
 }
@@ -1458,6 +1529,11 @@ img {
   .hero-actions .button.primary {
     min-height: 50px;
     font-size: 18px;
+  }
+
+  .nav .cta-btn {
+    min-height: 42px;
+    padding: 10px 16px;
   }
 
   .hero-proof {
