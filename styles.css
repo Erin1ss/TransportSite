@@ -897,23 +897,58 @@ img {
   }
 }
 
-.steps {
+.steps,
+.steps-list {
   display: grid;
   gap: 12px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.step {
+.steps-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.step,
+.step-card {
   background: var(--surface-soft);
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 16px;
 }
 
-.step strong {
+.step-card {
+  position: relative;
+  padding-left: 58px;
+}
+
+.step strong,
+.step-card strong {
   display: block;
   color: var(--primary-strong);
   margin-bottom: 8px;
+}
+
+.step-number {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--primary-strong);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.step-copy {
+  margin: 0;
+  color: #365057;
 }
 
 .reviews-grid {
@@ -955,10 +990,30 @@ img {
   font-size: 18px;
 }
 
+.faq p:last-child {
+  margin-bottom: 0;
+}
+
+.faq ul {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: #41585e;
+}
+
+.faq li + li {
+  margin-top: 6px;
+}
+
 .list-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
+}
+
+.semantic-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .list-item {
@@ -970,7 +1025,22 @@ img {
 }
 
 .list-item strong {
+  display: block;
+  margin-bottom: 8px;
   color: #18363b;
+}
+
+.list-item p {
+  margin: 0;
+}
+
+.list-item ul {
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.list-item li + li {
+  margin-top: 6px;
 }
 
 .comfort-note {
@@ -1167,6 +1237,7 @@ img {
 @media (max-width: 980px) {
   .hero-grid,
   .steps,
+  .steps-list,
   .reviews-grid,
   .list-grid,
   .audience-grid {
@@ -1307,7 +1378,7 @@ img {
   }
 
   .mobile-section-nav {
-    display: none;
+    display: block;
   }
 
   .section-title {
@@ -1355,6 +1426,7 @@ img {
 
   .hero-grid,
   .steps,
+  .steps-list,
   .reviews-grid,
   .list-grid,
   .audience-grid,
@@ -1555,7 +1627,7 @@ img {
 
 @media (max-width: 480px) {
   .mobile-section-nav {
-    display: none;
+    display: block;
   }
 
   .mobile-top-cta {
