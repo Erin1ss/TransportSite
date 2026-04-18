@@ -53,7 +53,7 @@
     ym(103402608, 'init', { webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true });
   </script>
   <!-- /Yandex.Metrika counter -->
-  <link rel="stylesheet" href="/styles.css?v=20260401c">
+  <link rel="stylesheet" href="/styles.css?v=20260418a">
 </head>
 <body>
   <noscript><div><img src="https://mc.yandex.ru/watch/103402608" style="position:absolute; left:-9999px;" alt=""></div></noscript>
@@ -294,7 +294,7 @@
         <p>Локальный сервис перевозки лежачих и маломобильных пассажиров по Казани, Татарстану и межгороду по согласованию.</p>
       </div>
       <div>
-        <h2>Основные страницы</h2>
+        <p class="footer-title">Основные страницы</p>
         <ul class="footer-links">
           <li><a href="/prices.html">Стоимость</a></li>
           <li><a href="/conditions.html">Условия</a></li>
@@ -305,7 +305,7 @@
         </ul>
       </div>
       <div>
-        <h2>Частые сценарии</h2>
+        <p class="footer-title">Частые сценарии</p>
         <ul class="footer-links">
           <li><a href="/iz-bolnicy-domoy.html">Из больницы домой</a></li>
           <li><a href="/kt-mrt-procedury.html">КТ, МРТ и процедуры</a></li>
@@ -340,12 +340,15 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
+  "@type": "CollectionPage",
   "@id": "https://edemleza.ru/testimonials.html#webpage",
   "url": "https://edemleza.ru/testimonials.html",
   "name": "Отзывы клиентов о перевозке по Казани и Татарстану | ЕдемЛежа",
   "inLanguage": "ru-RU",
   "dateModified": "2026-04-01",
+  "about": {
+    "@id": "https://edemleza.ru/testimonials.html#service"
+  },
   "breadcrumb": {
     "@id": "https://edemleza.ru/testimonials.html#breadcrumb"
   }
@@ -360,6 +363,7 @@
   "serviceType": "Отзывы клиентов о перевозке пассажиров ЕдемЛежа",
   "provider": {
     "@type": "Organization",
+    "@id": "https://edemleza.ru/#organization",
     "name": "ЕдемЛежа",
     "url": "https://edemleza.ru",
     "telephone": "+7 (965) 259-59-12"
@@ -367,6 +371,89 @@
   "areaServed": [
     "Казань",
     "Республика Татарстан"
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://edemleza.ru/testimonials.html#reviews",
+  "itemListOrder": "https://schema.org/ItemListOrderDescending",
+  "numberOfItems": 4,
+  "itemListElement": [
+    {
+      "@type": "Review",
+      "position": 1,
+      "reviewBody": "Забирали отца после операции из 7-й больницы. Приехали вовремя, без суеты подняли на 5 этаж. Спасибо за спокойную работу.",
+      "datePublished": "2026-03-02",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Рустем"
+      },
+      "itemReviewed": {
+        "@id": "https://edemleza.ru/testimonials.html#service"
+      }
+    },
+    {
+      "@type": "Review",
+      "position": 2,
+      "reviewBody": "Нужно было перевезти маму на КТ и обратно домой. Всё четко по времени, подождали нас у кабинета и помогли занести обратно.",
+      "datePublished": "2026-02-24",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Галина"
+      },
+      "itemReviewed": {
+        "@id": "https://edemleza.ru/testimonials.html#service"
+      }
+    },
+    {
+      "@type": "Review",
+      "position": 3,
+      "reviewBody": "Ребята аккуратные и вежливые. Машина чистая, ехали мягко, маме в дороге было спокойно.",
+      "datePublished": "2026-02-16",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Айгуль"
+      },
+      "itemReviewed": {
+        "@id": "https://edemleza.ru/testimonials.html#service"
+      }
+    },
+    {
+      "@type": "Review",
+      "position": 4,
+      "reviewBody": "Договорились вечером, утром уже были у нас. Перевезли дедушку из дома в реабилитационный центр без задержек.",
+      "datePublished": "2026-02-09",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Марат"
+      },
+      "itemReviewed": {
+        "@id": "https://edemleza.ru/testimonials.html#service"
+      }
+    }
   ]
 }
   </script>
