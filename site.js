@@ -1,5 +1,5 @@
 ﻿(() => {
-  const PHONE_DISPLAY = "+7 (965) 259-59-12";
+  const PHONE_DISPLAY = "8 962 559 59 12";
   const TRACKING_PARAMS = ["utm_", "gclid", "fbclid", "ysclid", "yclid", "_openstat", "_ym_debug"];
   let toastTimer = null;
 
