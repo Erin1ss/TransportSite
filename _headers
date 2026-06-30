@@ -18,5 +18,20 @@
 /status.json
   Content-Type: application/json
 
+/openid-configuration.json
+  Content-Type: application/json
+
+/oauth-authorization-server.json
+  Content-Type: application/json
+
+/jwks.json
+  Content-Type: application/jwk-set+json
+
+/.well-known/openid-configuration
+  Content-Type: application/json
+
+/.well-known/oauth-authorization-server
+  Content-Type: application/json
+
 /index.md
   Content-Type: text/markdown; charset=utf-8

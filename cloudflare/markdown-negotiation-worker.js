@@ -2,6 +2,14 @@ const MARKDOWN_SOURCE =
   "https://raw.githubusercontent.com/Erin1ss/TransportSite/master/index.md";
 const API_CATALOG_SOURCE =
   "https://raw.githubusercontent.com/Erin1ss/TransportSite/master/api-catalog.json";
+const WELL_KNOWN_JSON_SOURCES = {
+  "/.well-known/openid-configuration":
+    "https://raw.githubusercontent.com/Erin1ss/TransportSite/master/openid-configuration.json",
+  "/.well-known/oauth-authorization-server":
+    "https://raw.githubusercontent.com/Erin1ss/TransportSite/master/oauth-authorization-server.json",
+  "/.well-known/jwks.json":
+    "https://raw.githubusercontent.com/Erin1ss/TransportSite/master/jwks.json",
+};
 
 function acceptsMarkdown(request) {
   const accept = request.headers.get("accept") || "";
@@ -38,6 +46,32 @@ export default {
           "content-type": "application/linkset+json; charset=utf-8",
           "cache-control": "public, max-age=600",
           link: '</.well-known/api-catalog>; rel="self"; type="application/linkset+json", </openapi.json>; rel="service-desc"; type="application/openapi+json", </contacts.html>; rel="service-doc"; type="text/html", </status.json>; rel="status"; type="application/json"',
+        },
+      });
+    }
+
+    if (Object.prototype.hasOwnProperty.call(WELL_KNOWN_JSON_SOURCES, url.pathname)) {
+      const sourceResponse = await fetch(WELL_KNOWN_JSON_SOURCES[url.pathname], {
+        headers: { accept: "application/json" },
+      });
+
+      if (!sourceResponse.ok) {
+        return new Response("Discovery metadata source is unavailable.", {
+          status: 502,
+          headers: { "content-type": "text/plain; charset=utf-8" },
+        });
+      }
+
+      const contentType =
+        url.pathname === "/.well-known/jwks.json"
+          ? "application/jwk-set+json; charset=utf-8"
+          : "application/json; charset=utf-8";
+
+      return new Response(await sourceResponse.text(), {
+        status: 200,
+        headers: {
+          "content-type": contentType,
+          "cache-control": "public, max-age=600",
         },
       });
     }
