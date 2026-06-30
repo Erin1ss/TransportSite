@@ -1,3 +1,6 @@
+---
+permalink: /.well-known/api-catalog
+---
 {
   "linkset": [
     {
