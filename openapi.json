@@ -1,0 +1,68 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "EdemLeza Public Discovery API",
+    "version": "1.0.0",
+    "description": "Machine-readable discovery endpoints for EdemLeza public service information."
+  },
+  "servers": [
+    {
+      "url": "https://edemleza.ru"
+    }
+  ],
+  "paths": {
+    "/api-catalog.json": {
+      "get": {
+        "summary": "API catalog",
+        "description": "Returns the RFC 9264 linkset used for API discovery.",
+        "responses": {
+          "200": {
+            "description": "API catalog linkset",
+            "content": {
+              "application/linkset+json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/status.json": {
+      "get": {
+        "summary": "Service status",
+        "description": "Returns a lightweight public status document for the website.",
+        "responses": {
+          "200": {
+            "description": "Service status",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "service": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "status",
+                    "service"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

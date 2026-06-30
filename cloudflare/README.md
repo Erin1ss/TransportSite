@@ -7,6 +7,8 @@ GitHub Pages does not support `Accept: text/markdown` content negotiation at the
 
 The Worker keeps normal browser requests unchanged and returns `/index.md` as `text/markdown` when the homepage is requested with `Accept: text/markdown`.
 
+`api-catalog-worker.js` can also be deployed on the same zone, or merged into the markdown Worker, to serve `/.well-known/api-catalog` with `Content-Type: application/linkset+json`. GitHub Pages may publish `/api-catalog.json`, but it cannot reliably set the extensionless `/.well-known/api-catalog` path and MIME type required by RFC 9727 checks.
+
 Expected validation:
 
 ```powershell

@@ -8,5 +8,15 @@
   Content-Type: application/linkset+json
   Link: </api-catalog.json>; rel="self"; type="application/linkset+json", </contacts.html>; rel="service-doc"; type="text/html", </sitemap.xml>; rel="describedby"; type="application/xml"
 
+/.well-known/api-catalog
+  Content-Type: application/linkset+json
+  Link: </.well-known/api-catalog>; rel="self"; type="application/linkset+json", </openapi.json>; rel="service-desc"; type="application/openapi+json", </contacts.html>; rel="service-doc"; type="text/html", </status.json>; rel="status"; type="application/json"
+
+/openapi.json
+  Content-Type: application/openapi+json
+
+/status.json
+  Content-Type: application/json
+
 /index.md
   Content-Type: text/markdown; charset=utf-8
