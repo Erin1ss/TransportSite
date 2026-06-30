@@ -3,7 +3,9 @@
   "authorization_servers": [
     "https://edemleza.ru"
   ],
-  "scopes_supported": [],
+  "scopes_supported": [
+    "public"
+  ],
   "bearer_methods_supported": [
     "header"
   ]

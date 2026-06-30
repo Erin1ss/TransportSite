@@ -1,14 +1,14 @@
 # auth.md
 
-ЕдемЛежа publishes this file so AI agents can discover the current authentication and registration policy for `https://edemleza.ru`.
+ЕдемЛежа publishes this file so AI agents can discover the current authentication and registration policy for https://edemleza.ru.
 
 ## Service
 
 - Service: ЕдемЛежа
-- Resource: `https://edemleza.ru`
-- Authorization server issuer: `https://edemleza.ru`
-- OAuth Protected Resource Metadata: `https://edemleza.ru/.well-known/oauth-protected-resource`
-- OAuth Authorization Server Metadata: `https://edemleza.ru/.well-known/oauth-authorization-server`
+- Resource: https://edemleza.ru
+- Authorization server issuer: https://edemleza.ru
+- OAuth Protected Resource Metadata: https://edemleza.ru/.well-known/oauth-protected-resource
+- OAuth Authorization Server Metadata: https://edemleza.ru/.well-known/oauth-authorization-server
 
 ## Agent Registration Status
 
@@ -22,14 +22,14 @@ No production registration methods are currently enabled.
 
 Discovery metadata includes an `agent_auth` block with an anonymous method marked by the registration endpoint below. The endpoint is informational and does not issue credentials.
 
-- Registration endpoint: `https://edemleza.ru/agent/auth/not-supported/`
-- Claim endpoint: `https://edemleza.ru/agent/auth/not-supported/`
+- Registration endpoint: https://edemleza.ru/agent/auth/not-supported/
+- Claim endpoint: https://edemleza.ru/agent/auth/not-supported/
 - Supported identity type: `anonymous`
 - Supported credential type: `bearer`
-- Supported scopes: none
+- Supported scope: `public`
 
 ## Human Contact
 
-- Contact page: `https://edemleza.ru/contacts.html`
-- Privacy policy: `https://edemleza.ru/privacy.html`
+- Contact page: https://edemleza.ru/contacts.html
+- Privacy policy: https://edemleza.ru/privacy.html
 - Phone: `8 962 559 59 12`

@@ -5,7 +5,9 @@
   "jwks_uri": "https://edemleza.ru/jwks.json",
   "grant_types_supported": [],
   "response_types_supported": [],
-  "scopes_supported": [],
+  "scopes_supported": [
+    "public"
+  ],
   "subject_types_supported": [
     "public"
   ],
