@@ -5,9 +5,9 @@ GitHub Pages does not support `Accept: text/markdown` content negotiation at the
 1. Enable Cloudflare Markdown for Agents for the zone.
 2. Deploy `markdown-negotiation-worker.js` as a Worker route for `edemleza.ru/*`.
 
-The Worker keeps normal browser requests unchanged and returns `/index.md` as `text/markdown` when the homepage is requested with `Accept: text/markdown`.
+The Worker keeps normal browser requests unchanged, returns `/index.md` as `text/markdown` when the homepage is requested with `Accept: text/markdown`, and serves `/.well-known/api-catalog` as `application/linkset+json`.
 
-`api-catalog-worker.js` can also be deployed on the same zone, or merged into the markdown Worker, to serve `/.well-known/api-catalog` with `Content-Type: application/linkset+json`. GitHub Pages may publish `/api-catalog.json`, but it cannot reliably set the extensionless `/.well-known/api-catalog` path and MIME type required by RFC 9727 checks.
+`api-catalog-worker.js` is a smaller standalone version if you only need the API catalog behavior. GitHub Pages publishes `/api-catalog.json`, but it does not reliably publish the extensionless `/.well-known/api-catalog` path and MIME type required by RFC 9727 checks.
 
 Expected validation:
 
