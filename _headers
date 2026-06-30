@@ -33,5 +33,11 @@
 /.well-known/oauth-authorization-server
   Content-Type: application/json
 
+/.well-known/oauth-protected-resource
+  Content-Type: application/json
+
+/oauth-protected-resource.json
+  Content-Type: application/json
+
 /index.md
   Content-Type: text/markdown; charset=utf-8

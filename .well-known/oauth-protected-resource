@@ -1,0 +1,7 @@
+{
+  "resource": "https://edemleza.ru",
+  "authorization_servers": [
+    "https://edemleza.ru"
+  ],
+  "scopes_supported": []
+}

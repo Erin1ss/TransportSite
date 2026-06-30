@@ -7,6 +7,8 @@ const WELL_KNOWN_JSON_SOURCES = {
     "https://raw.githubusercontent.com/Erin1ss/TransportSite/master/openid-configuration.json",
   "/.well-known/oauth-authorization-server":
     "https://raw.githubusercontent.com/Erin1ss/TransportSite/master/oauth-authorization-server.json",
+  "/.well-known/oauth-protected-resource":
+    "https://raw.githubusercontent.com/Erin1ss/TransportSite/master/oauth-protected-resource.json",
   "/.well-known/jwks.json":
     "https://raw.githubusercontent.com/Erin1ss/TransportSite/master/jwks.json",
 };
