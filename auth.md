@@ -23,6 +23,7 @@ No production registration methods are currently enabled.
 Discovery metadata includes an `agent_auth` block with an anonymous method marked by the registration endpoint below. The endpoint is informational and does not issue credentials.
 
 - Registration endpoint: https://edemleza.ru/agent/auth/not-supported/
+- Identity endpoint: https://edemleza.ru/agent/auth/not-supported/
 - Claim endpoint: https://edemleza.ru/agent/auth/not-supported/
 - Supported identity type: `anonymous`
 - Supported credential type: `bearer`

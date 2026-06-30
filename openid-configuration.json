@@ -18,6 +18,12 @@
   "agent_auth": {
     "skill": "https://edemleza.ru/auth.md",
     "register_uri": "https://edemleza.ru/agent/auth/not-supported/",
+    "identity_endpoint": "https://edemleza.ru/agent/auth/not-supported/",
+    "claim_endpoint": "https://edemleza.ru/agent/auth/not-supported/",
+    "claim_uri": "https://edemleza.ru/agent/auth/not-supported/",
+    "credential_types_supported": [
+      "bearer"
+    ],
     "identity_types_supported": [
       "anonymous"
     ],
