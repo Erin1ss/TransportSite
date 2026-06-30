@@ -7,3 +7,6 @@
 /api-catalog.json
   Content-Type: application/linkset+json
   Link: </api-catalog.json>; rel="self"; type="application/linkset+json", </contacts.html>; rel="service-doc"; type="text/html", </sitemap.xml>; rel="describedby"; type="application/xml"
+
+/index.md
+  Content-Type: text/markdown; charset=utf-8
