@@ -1,9 +1,9 @@
 /
-  Link: </.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json", </sitemap.xml>; rel="describedby"; type="application/xml"
+  Link: </api-catalog.json>; rel="api-catalog"; type="application/linkset+json", </sitemap.xml>; rel="describedby"; type="application/xml"
 
 /index.html
-  Link: </.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json", </sitemap.xml>; rel="describedby"; type="application/xml"
+  Link: </api-catalog.json>; rel="api-catalog"; type="application/linkset+json", </sitemap.xml>; rel="describedby"; type="application/xml"
 
-/.well-known/api-catalog
+/api-catalog.json
   Content-Type: application/linkset+json
-  Link: </.well-known/api-catalog>; rel="self"; type="application/linkset+json", </contacts.html>; rel="service-doc"; type="text/html", </sitemap.xml>; rel="describedby"; type="application/xml"
+  Link: </api-catalog.json>; rel="self"; type="application/linkset+json", </contacts.html>; rel="service-doc"; type="text/html", </sitemap.xml>; rel="describedby"; type="application/xml"
