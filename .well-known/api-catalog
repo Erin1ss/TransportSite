@@ -1,0 +1,31 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://edemleza.ru/",
+      "service-doc": [
+        {
+          "href": "https://edemleza.ru/contacts.html",
+          "type": "text/html",
+          "title": "Contact and service request information"
+        },
+        {
+          "href": "https://edemleza.ru/faq.html",
+          "type": "text/html",
+          "title": "Frequently asked questions"
+        },
+        {
+          "href": "https://edemleza.ru/prices.html",
+          "type": "text/html",
+          "title": "Pricing information"
+        }
+      ],
+      "describedby": [
+        {
+          "href": "https://edemleza.ru/sitemap.xml",
+          "type": "application/xml",
+          "title": "Sitemap"
+        }
+      ]
+    }
+  ]
+}
