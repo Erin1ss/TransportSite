@@ -41,3 +41,6 @@
 
 /index.md
   Content-Type: text/markdown; charset=utf-8
+
+/auth.md
+  Content-Type: text/markdown; charset=utf-8
