@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "contact-service",
+      "type": "skill-md",
+      "description": "Public phone, contact page, service area, and emergency guidance for ЕдемЛежа.",
+      "url": "https://edemleza.ru/.well-known/agent-skills/contact-service/SKILL.md",
+      "digest": "sha256:05add5458f25680e0c0403eac9771f8a5c37dfa8c7ecea53b1663930dd3c48b6"
+    },
+    {
+      "name": "service-pages",
+      "type": "skill-md",
+      "description": "Discovery of the main public service, pricing, FAQ, review, and scenario pages.",
+      "url": "https://edemleza.ru/.well-known/agent-skills/service-pages/SKILL.md",
+      "digest": "sha256:4106c3beca2164b451a248994ff68804d139fe02085515429ab039610b34a79d"
+    },
+    {
+      "name": "pricing-factors",
+      "type": "skill-md",
+      "description": "Explains public factors that affect route-specific transport estimates.",
+      "url": "https://edemleza.ru/.well-known/agent-skills/pricing-factors/SKILL.md",
+      "digest": "sha256:3985596ff6f1f6bc6183486eddbe2e07f15c070c2cf319174d1340e86258865d"
+    }
+  ]
+}

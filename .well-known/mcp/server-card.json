@@ -1,0 +1,50 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/server-card/0.1.0.json",
+  "serverInfo": {
+    "name": "edemleza-public-site",
+    "version": "1.0.0"
+  },
+  "transport": {
+    "type": "webmcp",
+    "endpoint": "https://edemleza.ru/",
+    "description": "Browser-exposed WebMCP tools on the public website."
+  },
+  "transports": [
+    {
+      "type": "webmcp",
+      "endpoint": "https://edemleza.ru/",
+      "description": "Browser-exposed WebMCP tools on the public website."
+    }
+  ],
+  "capabilities": {
+    "tools": [
+      {
+        "name": "get_contact_info",
+        "description": "Return public phone and contact page information for ЕдемЛежа."
+      },
+      {
+        "name": "list_service_pages",
+        "description": "Return the main public service pages available on the site."
+      },
+      {
+        "name": "get_pricing_factors",
+        "description": "Return the public factors that affect route pricing."
+      }
+    ],
+    "resources": [
+      {
+        "uri": "https://edemleza.ru/index.md",
+        "name": "Homepage markdown"
+      },
+      {
+        "uri": "https://edemleza.ru/api-catalog.json",
+        "name": "API catalog"
+      },
+      {
+        "uri": "https://edemleza.ru/auth.md",
+        "name": "Auth.md"
+      }
+    ],
+    "prompts": []
+  }
+}

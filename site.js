@@ -1,6 +1,27 @@
 ﻿(() => {
   const PHONE_DISPLAY = "8 962 559 59 12";
+  const PHONE_TEL = "+79625595912";
   const TRACKING_PARAMS = ["utm_", "gclid", "fbclid", "ysclid", "yclid", "_openstat", "_ym_debug"];
+  const SERVICE_PAGES = [
+    { title: "Главная", url: "/" },
+    { title: "Контакты", url: "/contacts.html" },
+    { title: "Стоимость", url: "/prices.html" },
+    { title: "FAQ", url: "/faq.html" },
+    { title: "Отзывы", url: "/testimonials.html" },
+    { title: "Из больницы домой", url: "/iz-bolnicy-domoy.html" },
+    { title: "КТ, МРТ и процедуры", url: "/kt-mrt-procedury.html" },
+    { title: "Межгород по Татарстану", url: "/mezhgorod-po-tatarstanu.html" },
+    { title: "Подъём и спуск без лифта", url: "/podem-spusk-bez-lifta.html" },
+    { title: "Пожилые и маломобильные пассажиры", url: "/pozhilye-i-malomobilnye.html" },
+  ];
+  const PRICING_FACTORS = [
+    "Маршрут: город, Татарстан или межгород",
+    "Этаж, лифт, лестница и расстояние до транспорта",
+    "Необходимость подъёма или спуска без лифта",
+    "Ожидание у клиники, КТ, МРТ, процедуры или консультации",
+    "Плановая, срочная, ночная или фиксированная по времени подача",
+    "Особенности пассажира: коляска, послеоперационное состояние, ограниченная мобильность",
+  ];
   let toastTimer = null;
 
   function normalizeUrl() {
@@ -148,9 +169,78 @@
     update();
   }
 
+  function registerWebMcpTools() {
+    const modelContext = navigator.modelContext;
+    if (!modelContext) return;
+
+    const tools = [
+      {
+        name: "get_contact_info",
+        description: "Return public contact details for ЕдемЛежа.",
+        inputSchema: {
+          type: "object",
+          properties: {},
+          additionalProperties: false,
+        },
+        execute: async () => ({
+          phone: PHONE_DISPLAY,
+          tel: `tel:${PHONE_TEL}`,
+          contactPage: `${window.location.origin}/contacts.html`,
+          serviceArea: ["Казань", "Республика Татарстан"],
+          emergencyNotice: "Для экстренной медицинской помощи звоните 103 или 112.",
+        }),
+      },
+      {
+        name: "list_service_pages",
+        description: "Return the main public service pages on edemleza.ru.",
+        inputSchema: {
+          type: "object",
+          properties: {},
+          additionalProperties: false,
+        },
+        execute: async () => ({
+          pages: SERVICE_PAGES.map((page) => ({
+            title: page.title,
+            url: new URL(page.url, window.location.origin).href,
+          })),
+        }),
+      },
+      {
+        name: "get_pricing_factors",
+        description: "Return public factors that affect route-specific transport estimates.",
+        inputSchema: {
+          type: "object",
+          properties: {},
+          additionalProperties: false,
+        },
+        execute: async () => ({
+          factors: PRICING_FACTORS,
+          pricingPage: `${window.location.origin}/prices.html`,
+          note: "Точный расчёт зависит от маршрута и условий переноса.",
+        }),
+      },
+    ];
+
+    const controller = new AbortController();
+    window.addEventListener("pagehide", () => controller.abort(), { once: true });
+
+    try {
+      if (typeof modelContext.registerTool === "function") {
+        tools.forEach((tool) => modelContext.registerTool(tool, { signal: controller.signal }));
+      }
+
+      if (typeof modelContext.provideContext === "function") {
+        modelContext.provideContext({ tools }, { signal: controller.signal });
+      }
+    } catch (error) {
+      // WebMCP is experimental; failures should not affect normal site behavior.
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     normalizeUrl();
     enablePhoneCopy();
     setupMobileTopCta();
+    registerWebMcpTools();
   });
 })();
