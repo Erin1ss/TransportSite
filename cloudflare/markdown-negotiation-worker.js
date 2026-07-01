@@ -2,6 +2,8 @@ const MARKDOWN_SOURCE =
   "https://raw.githubusercontent.com/Erin1ss/TransportSite/master/index.md";
 const API_CATALOG_SOURCE =
   "https://raw.githubusercontent.com/Erin1ss/TransportSite/master/api-catalog.json";
+const DISCOVERY_LINK_HEADER =
+  '</.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json", </openapi.json>; rel="service-desc"; type="application/openapi+json", </contacts.html>; rel="service-doc"; type="text/html", </status.json>; rel="status"; type="application/json", </sitemap.xml>; rel="describedby"; type="application/xml"';
 const WELL_KNOWN_JSON_SOURCES = {
   "/.well-known/openid-configuration":
     "https://raw.githubusercontent.com/Erin1ss/TransportSite/master/openid-configuration.json",
@@ -100,6 +102,7 @@ export default {
           "content-type": "text/markdown; charset=utf-8",
           "x-markdown-tokens": String(markdownTokenEstimate(markdown)),
           "cache-control": "public, max-age=600",
+          link: DISCOVERY_LINK_HEADER,
           vary: "accept",
         },
       });
@@ -107,6 +110,9 @@ export default {
 
     const response = await fetch(request);
     const headers = new Headers(response.headers);
+    if (isHomepage) {
+      headers.set("Link", DISCOVERY_LINK_HEADER);
+    }
     headers.append("vary", "Accept");
     return new Response(response.body, {
       status: response.status,

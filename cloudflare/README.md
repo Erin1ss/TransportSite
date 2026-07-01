@@ -7,6 +7,8 @@ GitHub Pages does not support `Accept: text/markdown` content negotiation at the
 
 The Worker keeps normal browser requests unchanged, returns `/index.md` as `text/markdown` when the homepage is requested with `Accept: text/markdown`, serves `/.well-known/api-catalog` as `application/linkset+json`, and serves OAuth/OIDC discovery metadata under `/.well-known/openid-configuration`, `/.well-known/oauth-authorization-server`, `/.well-known/oauth-protected-resource`, and `/.well-known/jwks.json`.
 
+For homepage requests, the Worker also adds an RFC 8288 `Link` response header advertising `/.well-known/api-catalog`, OpenAPI metadata, service documentation, status, and sitemap resources.
+
 `api-catalog-worker.js` is a smaller standalone version if you only need the API catalog behavior. GitHub Pages publishes `/api-catalog.json`, but it does not reliably publish the extensionless `/.well-known/api-catalog` path and MIME type required by RFC 9727 checks.
 
 Expected validation:

@@ -1,8 +1,8 @@
 /
-  Link: </api-catalog.json>; rel="api-catalog"; type="application/linkset+json", </sitemap.xml>; rel="describedby"; type="application/xml"
+  Link: </.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json", </openapi.json>; rel="service-desc"; type="application/openapi+json", </contacts.html>; rel="service-doc"; type="text/html", </status.json>; rel="status"; type="application/json", </sitemap.xml>; rel="describedby"; type="application/xml"
 
 /index.html
-  Link: </api-catalog.json>; rel="api-catalog"; type="application/linkset+json", </sitemap.xml>; rel="describedby"; type="application/xml"
+  Link: </.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json", </openapi.json>; rel="service-desc"; type="application/openapi+json", </contacts.html>; rel="service-doc"; type="text/html", </status.json>; rel="status"; type="application/json", </sitemap.xml>; rel="describedby"; type="application/xml"
 
 /api-catalog.json
   Content-Type: application/linkset+json
