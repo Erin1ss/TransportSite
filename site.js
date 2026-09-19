@@ -13,6 +13,7 @@
     { title: "Межгород по Татарстану", url: "/mezhgorod-po-tatarstanu.html" },
     { title: "Подъём и спуск без лифта", url: "/podem-spusk-bez-lifta.html" },
     { title: "Пожилые и маломобильные пассажиры", url: "/pozhilye-i-malomobilnye.html" },
+    { title: "ГКБ №7 Казани", url: "/7-bolnica-kazan.html" },
   ];
   const PRICING_FACTORS = [
     "Маршрут: город, Татарстан или межгород",

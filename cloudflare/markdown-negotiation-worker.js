@@ -1,5 +1,5 @@
 const MARKDOWN_SOURCE =
-  "https://raw.githubusercontent.com/Erin1ss/TransportSite/master/index.md";
+  "https://raw.githubusercontent.com/Erin1ss/TransportSite/master/cloudflare/homepage.md";
 const API_CATALOG_SOURCE =
   "https://raw.githubusercontent.com/Erin1ss/TransportSite/master/api-catalog.json";
 const DISCOVERY_LINK_HEADER =
