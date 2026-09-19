@@ -100,7 +100,7 @@ for (const url of sitemapUrls) {
 }
 if (fs.existsSync(path.join(root, "index.md"))) addError("index.md всё ещё присутствует как потенциальный дубль главной");
 else addPass("markdown-дубль главной удалён");
-if (!read("cloudflare/markdown-negotiation-worker.js").includes("cloudflare/homepage.md")) addError("Cloudflare Worker не использует отдельный Markdown source");
+if (fs.existsSync(path.join(root, "cloudflare", "markdown-negotiation-worker.js")) || fs.existsSync(path.join(root, "cloudflare", "api-catalog-worker.js"))) addError("неиспользуемые Cloudflare Worker-артефакты всё ещё присутствуют");
 if (fs.existsSync(path.join(root, "_redirects"))) addWarning("_redirects присутствует, но GitHub Pages его не применяет");
 
 for (const page of pages) {
