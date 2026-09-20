@@ -182,21 +182,21 @@ async function runProductionQa() {
   }
 
   const matrixSpecs = [
-    ["http root", "http://edemleza.ru/", "https://edemleza.ru/", "https://edemleza.ru/", 200],
+    ["http root", "http://edemleza.ru/", "https://edemleza.ru/", "https://edemleza.ru/", 200, true],
     ["https root", "https://edemleza.ru/", "https://edemleza.ru/", "https://edemleza.ru/", 200],
-    ["http www", "http://www.edemleza.ru/", "https://edemleza.ru/", "https://edemleza.ru/", 200],
-    ["https www", "https://www.edemleza.ru/", "https://edemleza.ru/", "https://edemleza.ru/", 200],
-    ["index.html", "https://edemleza.ru/index.html", "https://edemleza.ru/index.html", "https://edemleza.ru/", 200],
-    ["about clean", "https://edemleza.ru/about", "https://edemleza.ru/about", "https://edemleza.ru/about.html", 200],
-    ["about slash", "https://edemleza.ru/about/", "https://edemleza.ru/about/", "", 404],
+    ["http www", "http://www.edemleza.ru/", "https://edemleza.ru/", "https://edemleza.ru/", 200, true],
+    ["https www", "https://www.edemleza.ru/", "https://edemleza.ru/", "https://edemleza.ru/", 200, true],
+    ["index.html", "https://edemleza.ru/index.html", "https://edemleza.ru/", "https://edemleza.ru/", 200, true],
+    ["about clean", "https://edemleza.ru/about", "https://edemleza.ru/about.html", "https://edemleza.ru/about.html", 200, true],
+    ["about slash", "https://edemleza.ru/about/", "https://edemleza.ru/about.html", "https://edemleza.ru/about.html", 200, true],
     ["about.html", "https://edemleza.ru/about.html", "https://edemleza.ru/about.html", "https://edemleza.ru/about.html", 200],
-    ["prices clean", "https://edemleza.ru/prices", "https://edemleza.ru/prices", "https://edemleza.ru/prices.html", 200],
+    ["prices clean", "https://edemleza.ru/prices", "https://edemleza.ru/prices.html", "https://edemleza.ru/prices.html", 200, true],
     ["prices.html", "https://edemleza.ru/prices.html", "https://edemleza.ru/prices.html", "https://edemleza.ru/prices.html", 200],
     ["gkb", "https://edemleza.ru/7-bolnica-kazan.html", "https://edemleza.ru/7-bolnica-kazan.html", "https://edemleza.ru/7-bolnica-kazan.html", 200],
     ["utm root", "https://edemleza.ru/?utm_source=qa", "https://edemleza.ru/?utm_source=qa", "https://edemleza.ru/", 200],
     ["fake 404", "https://edemleza.ru/nonexistent-seo-check-2026", "https://edemleza.ru/nonexistent-seo-check-2026", "", 404],
   ];
-  for (const [label, url, expectedFinal, expectedCanonical, expectedStatus] of matrixSpecs) {
+  for (const [label, url, expectedFinal, expectedCanonical, expectedStatus, expectedRedirect = false] of matrixSpecs) {
     const result = await productionGet(url);
     const item = { label, status: result.status, finalUrl: result.finalUrl, canonical: "" };
     productionMatrix.push(item);
@@ -210,7 +210,8 @@ async function runProductionQa() {
     if (result.status !== expectedStatus) addError(`production ${label}: HTTP ${result.status}, ожидался ${expectedStatus}`);
     if (result.finalUrl !== expectedFinal) addError(`production ${label}: final URL ${result.finalUrl}, ожидался ${expectedFinal}`);
     if (expectedCanonical && meta.canonical !== expectedCanonical) addError(`production ${label}: canonical ${meta.canonical || "—"}, ожидался ${expectedCanonical}`);
-    if (result.status === 200 && expectedCanonical && result.finalUrl === url && result.finalUrl !== expectedCanonical) addWarning(`production ${label}: альтернативный URL отвечает 200 без серверного redirect`);
+    if (expectedRedirect && !result.chain.some((step) => step.status === 301)) addError(`production ${label}: не найден ожидаемый HTTP 301`);
+    if (result.status === 200 && expectedCanonical && result.finalUrl === url && result.finalUrl !== expectedCanonical && !url.includes("?")) addWarning(`production ${label}: альтернативный URL отвечает 200 без серверного redirect`);
   }
 
   const robots = await productionGet(`${origin}/robots.txt`);
